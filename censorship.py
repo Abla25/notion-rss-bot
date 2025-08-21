@@ -111,6 +111,13 @@ class DataCensor:
             # Pattern for "6 12 34 56 78" format (single digit + groups of 2)
             re.compile(r'\b[67]\s\d{2}\s\d{2}\s\d{2}\s\d{2}\b', re.IGNORECASE),
             re.compile(r'\b[67]\s{2,}\d{2}\s{2,}\d{2}\s{2,}\d{2}\s{2,}\d{2}\b', re.IGNORECASE),
+            
+            # Pattern for "614 25 98 71" format (3-2-2-2 digits)
+            re.compile(r'\b[67]\d{2}\s\d{2}\s\d{2}\s\d{2}\b', re.IGNORECASE),
+            re.compile(r'\b[67]\d{2}\s{2,}\d{2}\s{2,}\d{2}\s{2,}\d{2}\b', re.IGNORECASE),
+            
+            # Generic pattern for any 9-digit Spanish number with spaces (ultimate fallback)
+            re.compile(r'\b[67]\d{1,3}\s+\d{1,3}\s+\d{1,3}\s+\d{1,3}\b', re.IGNORECASE),
         ]
         
         # Pre-compile other patterns
