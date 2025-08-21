@@ -34,6 +34,9 @@ jobs:
           RSS_URL_1: ${{ secrets.RSS_URL_1 }}
           RSS_URL_2: ${{ secrets.RSS_URL_2 }}
           RSS_URL_3: ${{ secrets.RSS_URL_3 }}
+          RSS_URL_4: ${{ secrets.RSS_URL_4 }}
+          RSS_URL_5: ${{ secrets.RSS_URL_5 }}
+          RSS_URL_6: ${{ secrets.RSS_URL_6 }}
         run: python main.py
 
       - name: Usa Node 20
