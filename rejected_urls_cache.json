@@ -747,8 +747,16 @@
     "https://www.facebook.com/groups/apartamentosbarcelona/posts/4013333165662976/": {
       "reason": "AI_NOT_RELEVANT",
       "timestamp": "2025-08-21T15:27:07.282565"
+    },
+    "https://www.facebook.com/groups/apartamentosbarcelona/posts/4012983535697939/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-21T16:35:04.328373"
+    },
+    "https://www.facebook.com/groups/apartamentosbarcelona/posts/4013344802328479/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-21T16:35:04.329915"
     }
   },
-  "total_rejected_count": 105,
-  "timestamp": "2025-08-21T15:26:22.570288"
+  "total_rejected_count": 107,
+  "timestamp": "2025-08-21T16:34:55.680713"
 }

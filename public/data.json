@@ -1,8 +1,25 @@
 {
-  "generatedAt": "2025-08-21T15:27:49.741Z",
-  "count": 73,
-  "totalRejectedCount": 105,
+  "generatedAt": "2025-08-21T16:35:45.219Z",
+  "count": 74,
+  "totalRejectedCount": 107,
   "results": [
+    {
+      "id": "256b5f64-9329-8168-be0c-d69d4e315c52",
+      "title": "Room for rent in Gràcia, Barcelona",
+      "overview": "Room for rent in a shared apartment in Gràcia, close to metro L4 Alfons X, 490€ per month including services, available from September 1st, 2025",
+      "description": "Hola, busco compañera/o de piso , estudiante, que sea tranquil@ y asead@, zona de gràcia. Metro cercano: L4 Alfons X y lineas de bus. 490€ (servicios incluidos)+ fianza. Habitación doble (canape, armario), piso compartido y amoblado. 🔹️Disponible 1 septiembre 2025* 🔹️Larga Estancia* 🔹️Habitación solo para 1 persona* 🔹️Información por interno*",
+      "price": "490€",
+      "zone": "Gràcia",
+      "zoneMacro": "Gràcia",
+      "rooms": "1 double room",
+      "reliability": 5,
+      "reliabilityReason": "This post provides detailed information about the rental, including price, location, and amenities, and includes a photo, making it a reliable listing",
+      "datePublished": "",
+      "dateAdded": "2025-08-21T16:35:00.000+00:00",
+      "link": "https://www.facebook.com/groups/apartamentosbarcelona/posts/4013044795691813/",
+      "status": "active",
+      "imageUrl": "https://scontent-cdg4-1.xx.fbcdn.net/v/t39.30808-6/536281334_10238651755373914_5247341344071111543_n.jpg?stp=cp6_dst-jpg_s600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=e3bUGOY9ExYQ7kNvwGDmK9T&_nc_oc=AdkKUeu_04ud8a0PBiB2x9hkPKYh56AMVA6PhoOJp0WmF96f9Nz6zcaGOHlb5-uiUnw&_nc_zt=23&_nc_ht=scontent-cdg4-1.xx&_nc_gid=meDu4WGQZHSQsUsgTdDC2g&oh=00_AfXvzK2oN8eNWyJURb26-FcVzov7K1KFm9tTfXGvPJq4qg&oe=68AD118E"
+    },
     {
       "id": "256b5f64-9329-8135-b542-cf4a2464b689",
       "title": "Room for rent in Barcelona from September",
