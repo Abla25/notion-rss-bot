@@ -1,6 +1,6 @@
 # 🏠 RoomRadar - Intelligent Real Estate Listing System
 
-**RoomRadar** is an automated system that aggregates, filters, and analyzes real estate listings from Facebook groups, using AI to evaluate reliability and provide a modern web interface for housing search in Barcelona.
+**RoomRadar** is an automated system that aggregates, filters, and analyzes real estate listings from Facebook groups, using AI to evaluate reliability and provide a modern web interface for housing search in Barcelona :)
 
 ![RoomRadar Banner](https://img.shields.io/badge/Status-Production%20Ready-brightgreen) ![Python](https://img.shields.io/badge/Python-3.8+-blue) ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow) ![Notion](https://img.shields.io/badge/Database-Notion-black)
 
