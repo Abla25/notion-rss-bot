@@ -1,8 +1,59 @@
 {
-  "generatedAt": "2025-08-21T12:57:10.179Z",
-  "count": 69,
-  "totalRejectedCount": 96,
+  "generatedAt": "2025-08-21T13:37:39.214Z",
+  "count": 72,
+  "totalRejectedCount": 103,
   "results": [
+    {
+      "id": "256b5f64-9329-8166-bf3c-e6a87d7872d7",
+      "title": "Room for rent for a single woman",
+      "overview": "Renting a room in a clean apartment with elevator and good bus, train, and tram connections in San Feliu de Llobregat",
+      "description": "Alquilo habitacion para mujer sola en san Feliu de Llobregat ,Piso muy limpio, con ascensor y bien comunicado con buses , tren y tranvía T3 .. Info [MESSAGING CONTACT CENSORED]",
+      "price": "N/A",
+      "zone": "San Feliu de Llobregat",
+      "zoneMacro": "",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "The post lacks photos and has limited information, but it provides a contact method and seems to be a genuine rental offer",
+      "datePublished": "",
+      "dateAdded": "2025-08-21T13:36:00.000+00:00",
+      "link": "https://www.facebook.com/groups/apartamentosbarcelona/posts/4014283842234575/",
+      "status": "active",
+      "imageUrl": ""
+    },
+    {
+      "id": "256b5f64-9329-8116-ba72-ded1cb6985a2",
+      "title": "Room for rent in central Barcelona",
+      "overview": "A room is available for rent in a central Barcelona location, near the Metro San Antonio",
+      "description": "Hola, alquilo habitación para chica 500€ + 200 de fianza. Vivo sólo yo. Está en el límite del barrio del raval con San Antonio a 2' del Metro San Antonio. Está en el centro de Barcelona y tiene súper buena conexión con toda la ciudad.",
+      "price": "500€ + 200€ deposit",
+      "zone": "El Raval/San Antonio, Barcelona",
+      "zoneMacro": "Ciutat Vella",
+      "rooms": "",
+      "reliability": 5,
+      "reliabilityReason": "The post includes a clear description, price, and location, as well as a photo of the room, and does not appear to be a scam",
+      "datePublished": "",
+      "dateAdded": "2025-08-21T13:35:00.000+00:00",
+      "link": "https://www.facebook.com/groups/2723040451261813/posts/4296696853896157/",
+      "status": "active",
+      "imageUrl": "https://scontent.fpny2-1.fna.fbcdn.net/v/t39.30808-6/536864360_10237359645067863_281801993988012689_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=xWsPdlNvRmgQ7kNvwGu4t3U&_nc_oc=AdlDQvfg_Q38ehjrdzSObeBB7DRO3I48EEl4sM6h_Jdz5ydhMoDxVurZe29k5tTBvUo&_nc_zt=23&_nc_ht=scontent.fpny2-1.fna&_nc_gid=cHSDYBc7Z7F7HfmQ2CLTcw&oh=00_AfXBLT1ULjBr_HD4eNTM9libDx0_ZLhlNI1XNvqidm8uAA&oe=68ACF380"
+    },
+    {
+      "id": "256b5f64-9329-812b-8d83-d13c50446b52",
+      "title": "Room for rent for a single woman",
+      "overview": "Clean apartment with elevator, well-connected by buses, train, and tram T3 in San Feliu de Llobregat",
+      "description": "Alquilo habitacion para mujer sola en san Feliu de Llobregat ,Piso muy limpio, con ascensor y bien comunicado con buses , tren y tranvía T3 .. Info [MESSAGING CONTACT CENSORED]",
+      "price": "N/A",
+      "zone": "San Feliu de Llobregat",
+      "zoneMacro": "",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "The post lacks photos and does not provide a clear description of the room or the rental terms, which raises some doubts about its legitimacy",
+      "datePublished": "",
+      "dateAdded": "2025-08-21T13:34:00.000+00:00",
+      "link": "https://www.facebook.com/groups/2723040451261813/posts/4296854387213737/",
+      "status": "expired",
+      "imageUrl": ""
+    },
     {
       "id": "256b5f64-9329-81f2-a9c5-dd32a96ff047",
       "title": "Room for rent for working person",
@@ -119,7 +170,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-21T11:21:00.000+00:00",
       "link": "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1069794765326055/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": "https://scontent.fdel46-1.fna.fbcdn.net/v/t39.30808-6/535481870_10237359641147765_1647879046967397006_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=L_VyOvIizU4Q7kNvwGmO1ju&_nc_oc=AdmIJ2LCmWZFvO2GXwbMHs8hXxmNPijUkybLj6whGSn13lYGu49m9YtcgAq94QgbB7c&_nc_zt=23&_nc_ht=scontent.fdel46-1.fna&_nc_gid=t7KWy4rDYQc52xclfCPdhA&oh=00_AfXDjPPoSlJU3pFzSMIcuZtjv8cjhbfbsX8HGNMtUbSsiw&oe=68ACDBDE"
     },
     {
@@ -204,7 +255,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-21T09:58:00.000+00:00",
       "link": "https://www.facebook.com/groups/apartamentosbarcelona/posts/4013967462266213/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": "https://scontent-maa3-3.xx.fbcdn.net/v/t39.30808-6/536269544_642248165592115_6752202823829498580_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=GI32y-FXyewQ7kNvwHVFO9G&_nc_oc=AdmfuSH40X4sdto4WX7G-J0Ox0S8CsqpjnPVSSfBbadNqpJBfbQQwFPhRxinvpp4BHU&_nc_zt=23&_nc_ht=scontent-maa3-3.xx&_nc_gid=oAIcbSLHAAEk3nisnPQG0g&oh=00_AfWVEgRuadqE8dLqGd6zm9F-pgf8sQlGqvpwTfn5C85aag&oe=68AC9E66"
     },
     {
