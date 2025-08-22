@@ -105,10 +105,10 @@ class IdealistaAPI:
             # Aggiorna timestamp ultima richiesta
             self.last_request_time = time.time()
             
-            response = requests.get(
+            response = requests.post(
                 "https://api.idealista.com/3.5/es/search",
                 headers={"Authorization": f"Bearer {self.access_token}"},
-                params=params
+                json=params
             )
             
             if response.status_code == 200:
