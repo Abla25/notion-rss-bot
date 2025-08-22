@@ -1,4 +1,4 @@
-name: Idealista Unified (Populate + Export)
+name: Idealista Unified (Populate + Export) - TESTING MODE
 
 on:
   schedule:
@@ -37,14 +37,11 @@ jobs:
       run: |
         npm install
         
-    - name: Populate Idealista Database
-      env:
-        NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
-        IDEALISTA_API_KEY: ${{ secrets.IDEALISTA_API_KEY }}
-        IDEALISTA_API_SECRET: ${{ secrets.IDEALISTA_API_SECRET }}
-        IDEALISTA_NOTION_DATABASE_ID: ${{ secrets.IDEALISTA_NOTION_DATABASE_ID }}
+    # TESTING MODE: Skip API calls, only export existing data
+    - name: Populate Idealista Database (SKIPPED - Testing Mode)
       run: |
-        python idealista/populate_idealista.py
+        echo "🧪 TESTING MODE: Skipping API calls to avoid rate limits"
+        echo "📊 Using existing database data only"
         
     - name: Export Idealista Data
       env:
