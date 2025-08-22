@@ -1,8 +1,25 @@
 {
-  "generatedAt": "2025-08-22T06:37:40.089Z",
-  "count": 109,
-  "totalRejectedCount": 169,
+  "generatedAt": "2025-08-22T07:27:57.413Z",
+  "count": 110,
+  "totalRejectedCount": 177,
   "results": [
+    {
+      "id": "257b5f64-9329-8130-becf-fe3bdce9cbde",
+      "title": "Spacious and bright room for rent",
+      "overview": "A large and luminous room for rent, suitable for one person or shared, located near L5 Pubillas Cases in Barcelona",
+      "description": "Habitación amplia y luminosa con cama grande. Se alquila para una persona o para compartir. L5 Pubillas Cases. [MESSAGING CONTACT CENSORED]",
+      "price": "N/A",
+      "zone": "L5 Pubillas Cases",
+      "zoneMacro": "",
+      "rooms": "1",
+      "reliability": 2,
+      "reliabilityReason": "The post lacks photos and has minimal information, but it seems to be a genuine rental listing with contact information available",
+      "datePublished": "",
+      "dateAdded": "2025-08-22T07:26:00.000+00:00",
+      "link": "https://www.facebook.com/groups/apartamentosbarcelona/posts/4013023982360561/",
+      "status": "active",
+      "imageUrl": ""
+    },
     {
       "id": "257b5f64-9329-81a3-bad5-f5fd0a3aae7f",
       "title": "Small room for rent for a lady",
