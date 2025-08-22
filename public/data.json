@@ -1,8 +1,93 @@
 {
-  "generatedAt": "2025-08-22T13:35:20.219Z",
-  "count": 131,
-  "totalRejectedCount": 233,
+  "generatedAt": "2025-08-22T14:28:52.104Z",
+  "count": 136,
+  "totalRejectedCount": 244,
   "results": [
+    {
+      "id": "257b5f64-9329-8108-ae06-fd5278ed4724",
+      "title": "Renting out a single room for a male tenant",
+      "overview": "A single room is available for rent in a shared apartment, with a price of 450 Euros including services, located in the Plaza Virrei Amat area of Barcelona",
+      "description": "Alquilamos habitación INDIVIDUAL PARA CHICO ordenado con trabajo estable, sociable y respetuoso.NO FUMADOR. Habitación exterior a balcón. Cuenta con armario mesita noche y cama equipada. Precio 450 Euros Servicios incluidos. ZONA PLAZA VIRREI AMAT (BARCELONA). Metro L5. Cerca se dispone de Supermercados,centro de salud, tiendas, centro comercial, bancos y gimnasios . No se admiten visitas, parejas ni mascotas. No atiendo por Messenger gracias. Teléfono / Wasshap de contacto [PHONE NUMBER CENSORED] David.",
+      "price": "450 Euros",
+      "zone": "Plaza Virrei Amat, Barcelona",
+      "zoneMacro": "Gràcia",
+      "rooms": "",
+      "reliability": 5,
+      "reliabilityReason": "The post includes a clear description of the room, price, and location, as well as contact information and a photo, indicating a high level of completeness and reliability",
+      "datePublished": "",
+      "dateAdded": "2025-08-22T14:28:00.000+00:00",
+      "link": "https://www.facebook.com/groups/365556558673981/posts/1069497484946548/",
+      "status": "active",
+      "imageUrl": "https://scontent.fccu35-1.fna.fbcdn.net/v/t39.30808-6/538364649_10234123302756949_9120176874303827006_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=HWF3GSJDLS8Q7kNvwGd73VZ&_nc_oc=AdnSYOEGd4a4vmYYHSFszzEwT7GUA6reOnSUgtYPbWt9ppt2tNdN3R-nkLY8TnuWKmgGBbx73_3SBkOrCUo13mwB&_nc_zt=23&_nc_ht=scontent.fccu35-1.fna&_nc_gid=CWaPezHTn8GgjtTLTRuTcg&oh=00_AfXaOXf1xgRCaSd7C6Ll2hrgAqxuX0B-spF3l-qkJPfIpg&oe=68AE345A"
+    },
+    {
+      "id": "257b5f64-9329-817e-821d-f753b7170692",
+      "title": "Room for rent in Barcelona city center",
+      "overview": "A room for single use is available for rent in a quiet neighborhood in Barcelona, with a small kitchen and office space",
+      "description": "Una habitación para estudiantes diferente a la se publicó hace unos días Hola, somos Matt y Xavier. Alquilamos habitación en el centro de Barcelona. A 2 minutos a pie de Sants Estación (tren y metro). A 10 minutos a pie de Montjuïc, con jardines y parques. En un bonito edificio antiguo, en un barrio tranquilo. La habitación tiene 14 m² y es de uso individual. Se puede usar una pequeña cocina/office. Somos LGTBIQA+ friendly. Precio mensual: 450 € con todos los gastos incluidos + 1 mes de depósito (450 €). Disponible a partir del 1 de Septiembre . Para más información, por favor escribir a wtsp [PHONE NUMBER CENSORED] (Xavier). Estaré encantado en ayudarte con todo lo que necesites. Gracias! — A different room for STUDENTS than the one published a few days ago. Hi we are Matt and Xavier living in Barcelona. We have a room for rent in the center of the city. A 2-minute walk from Sants Station train and subway. A 10-minute walk from Montjuïc, with gardens and parks. Located in a beautiful old building, in a quiet neighborhood. The room is 14 m² and is for single use. A small kitchen/office is available. We are LGBTQIA+ friendly. Monthly price: €450 with all bills included + 1 month of deposit €450 Available from September 1st For more information, please WhatsApp at [PHONE NUMBER CENSORED] (Xavier) I'd be happy to explain you with anything you need. Thank you!",
+      "price": "450 €",
+      "zone": "Barcelona city center",
+      "zoneMacro": "Sants-Montjuïc",
+      "rooms": "",
+      "reliability": 5,
+      "reliabilityReason": "The post contains a clear description of the room, price, and location, and includes photos and contact information, with no indicators of a scam",
+      "datePublished": "",
+      "dateAdded": "2025-08-22T14:27:00.000+00:00",
+      "link": "https://www.facebook.com/groups/365556558673981/posts/1069529931609970/",
+      "status": "active",
+      "imageUrl": "https://scontent.fccu35-1.fna.fbcdn.net/v/t39.30808-6/538121312_10225782427782513_6488381714244322765_n.jpg?stp=cp6_dst-jpg_s600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=aOSZuypftdsQ7kNvwEbCTvh&_nc_oc=AdnKmt-m1b9FNcFT10p-VIyE8yCgN8aY_EQWiMp23hS0gYttrUpeUjPCq5R_viyhigWzYfnPLw2F9Vdjn7YX7I5s&_nc_zt=23&_nc_ht=scontent.fccu35-1.fna&_nc_gid=kjmLF4apjxwHI0ZMQtcqpw&oh=00_AfVlPuq4IbyH_UUgVIHuG6Y_YFZSUEP-Nzkgeq6UGwVKGA&oe=68AE64DC"
+    },
+    {
+      "id": "257b5f64-9329-8162-886a-de2d3c287ba5",
+      "title": "Room for rent in Gabarra area",
+      "overview": "Room available for rent in Gabarra area starting from September 1st",
+      "description": "Se alquila habitación zona gabarra disponible a partir del 1 de septiembre",
+      "price": "N/A",
+      "zone": "Gabarra",
+      "zoneMacro": "",
+      "rooms": "1",
+      "reliability": 2,
+      "reliabilityReason": "The listing lacks essential details such as price and photos, which raises concerns about its reliability.",
+      "datePublished": "",
+      "dateAdded": "2025-08-22T14:26:00.000+00:00",
+      "link": "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1070658655239666/",
+      "status": "active",
+      "imageUrl": ""
+    },
+    {
+      "id": "257b5f64-9329-817e-af50-e296adb805be",
+      "title": "Room for rent in Hospitalet de Llobregat",
+      "overview": "A room is available for a single person in Hospitalet de Llobregat, starting from 01/09",
+      "description": "Se alquila habitación para una sola persona en Hospitalet de Llobregat .. para 01/09. ...llamar ...[PHONE NUMBER CENSORED]",
+      "price": "N/A",
+      "zone": "Hospitalet de Llobregat",
+      "zoneMacro": "L'Hospitalet de Llobregat",
+      "rooms": "N/A",
+      "reliability": 2,
+      "reliabilityReason": "The listing lacks photos and detailed information, but it provides a phone number for contact, which is a positive indicator, however, the lack of visuals and scarce details lowers the reliability score",
+      "datePublished": "",
+      "dateAdded": "2025-08-22T14:25:00.000+00:00",
+      "link": "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1070736951898503/",
+      "status": "active",
+      "imageUrl": ""
+    },
+    {
+      "id": "257b5f64-9329-81ea-aebb-e3a85b25c7c2",
+      "title": "Room for rent in Paseo Fabra i Puig",
+      "overview": "A room for one person is available for rent in Paseo Fabra i Puig, more information available via private message.",
+      "description": "SSe alquila habitación para una sola persona en paseo Fabra i Puig línea roja información al privado",
+      "price": "N/A",
+      "zone": "Paseo Fabra i Puig",
+      "zoneMacro": "Horta Guinardó",
+      "rooms": "1",
+      "reliability": 2,
+      "reliabilityReason": "The post lacks photos and price information, which reduces its reliability, but it does seem to be a genuine rental listing.",
+      "datePublished": "",
+      "dateAdded": "2025-08-22T14:24:00.000+00:00",
+      "link": "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1070751118563753/",
+      "status": "active",
+      "imageUrl": ""
+    },
     {
       "id": "257b5f64-9329-8104-9cfe-fd57a9bdd3ab",
       "title": "Beautiful room for rent in central Barcelona",
@@ -272,7 +357,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-22T09:29:00.000+00:00",
       "link": "https://www.facebook.com/groups/1674520359717832/posts/2232086700627859/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": "https://scontent.fdel51-1.fna.fbcdn.net/v/t39.30808-6/536272232_10225747836717758_94377666046506683_n.jpg?stp=cp6_dst-jpg_s600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=OBqZSmO0Y2oQ7kNvwE1q436&_nc_oc=Adm9d0pKcFZmU6Bm4PnNU_d00KQZxyGluzETDiGOVzcZijKZgkg_rvZtG4eb6jvwVAc&_nc_zt=23&_nc_ht=scontent.fdel51-1.fna&_nc_gid=AWOoTEzIaNcYSlkKxZ4_hA&oh=00_AfU_SlocHk_sjcHW-0pMtQ_nYvDL9_EgSTi_WUGQNcC2Hw&oe=68AE0E78"
     },
     {
@@ -510,7 +595,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-22T02:00:00.000+00:00",
       "link": "https://www.facebook.com/groups/365556558673981/posts/1068783691684594/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": "https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/536269439_10234111494301745_4541912017278929162_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=2n2HYQcrwzAQ7kNvwHMIvlP&_nc_oc=AdkwgOBZs1EcCR9ijFD5D1pbgrALDuXLeYuoqZz5_naPoUvA4hNLQ5STPxKRYYo_l6k&_nc_zt=23&_nc_ht=scontent-cdg4-2.xx&_nc_gid=-a0Mc3yB9UnEApik-kY9XA&oh=00_AfWu59CgFnSUufNEwdRm1nq7CvFduH7GjgJyn9a5NpTjzQ&oe=68AD775E"
     },
     {
@@ -986,7 +1071,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-21T16:35:00.000+00:00",
       "link": "https://www.facebook.com/groups/apartamentosbarcelona/posts/4013044795691813/",
-      "status": "verification_needed",
+      "status": "active",
       "imageUrl": "https://scontent-cdg4-1.xx.fbcdn.net/v/t39.30808-6/536281334_10238651755373914_5247341344071111543_n.jpg?stp=cp6_dst-jpg_s600x600_tt6&_nc_cat=102&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=e3bUGOY9ExYQ7kNvwGDmK9T&_nc_oc=AdkKUeu_04ud8a0PBiB2x9hkPKYh56AMVA6PhoOJp0WmF96f9Nz6zcaGOHlb5-uiUnw&_nc_zt=23&_nc_ht=scontent-cdg4-1.xx&_nc_gid=meDu4WGQZHSQsUsgTdDC2g&oh=00_AfXvzK2oN8eNWyJURb26-FcVzov7K1KFm9tTfXGvPJq4qg&oe=68AD118E"
     },
     {
@@ -1105,7 +1190,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-21T12:53:00.000+00:00",
       "link": "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1069823911989807/",
-      "status": "active",
+      "status": "verification_needed",
       "imageUrl": "https://scontent-cdg4-3.xx.fbcdn.net/v/t39.30808-6/537632154_122264642498025903_8552933128684460162_n.jpg?stp=cp6_dst-jpg_s600x600_tt6&_nc_cat=110&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=9zAhIrGcbAgQ7kNvwEFGXCR&_nc_oc=AdktCZG0j9IgpUDE7SypECDS8b6Y1IX1rwZnkEknv2Mg_AiKaX06Y-494EzNPqYogEI&_nc_zt=23&_nc_ht=scontent-cdg4-3.xx&_nc_gid=aWD5R-dSMkgaPQ9cbTaxzQ&oh=00_AfVMpBG_5gBy-NicPrqcN5HSONZEHRN1rLsRgIo2jjBmeg&oe=68ACDBA3"
     },
     {
