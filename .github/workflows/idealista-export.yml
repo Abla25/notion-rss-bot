@@ -27,7 +27,7 @@ jobs:
         NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
         IDEALISTA_NOTION_DATABASE_ID: ${{ secrets.IDEALISTA_NOTION_DATABASE_ID }}
       run: |
-        node scripts/fetch_idealista.js
+        node idealista/fetch_idealista.js
         
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
