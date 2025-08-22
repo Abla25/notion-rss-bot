@@ -1612,8 +1612,8 @@
     function updateStats() {
       const statsDiv = document.getElementById('stats');
       if (allListings.length > 0) {
-        // Count active posts (not expired)
-        const activeListings = allListings.filter(l => l.status !== "expired");
+        // Count active posts (not expired and not verification_needed)
+        const activeListings = allListings.filter(l => l.status !== "expired" && l.status !== "verification_needed");
         const total = activeListings.length;
         const filtered = filteredListings.length;
         const hasActiveFilters = hasFilters();
@@ -1738,7 +1738,7 @@
 
     function populateFilters() {
       // Filter only active posts to populate filters
-      const activeListings = allListings.filter(l => l.status !== "expired");
+      const activeListings = allListings.filter(l => l.status !== "expired" && l.status !== "verification_needed");
       const zones = [...new Set(activeListings.map(l => l.zoneMacro || null).filter(Boolean))].sort();
 
       console.log("Available zones:", zones);
@@ -1759,7 +1759,7 @@
 
       filteredListings = allListings.filter(l => {
         // Exclude posts with status "expired"
-        if (l.status === "expired") {
+        if (l.status === "expired" || l.status === "verification_needed") {
           return false;
         }
         
