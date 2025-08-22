@@ -109,7 +109,6 @@ class IdealistaAPI:
             "sort": "desc",
             "locale": "es",
             # Room-specific filters
-            "newGender": "mixed",  # male, female, mixed
             "housemates": "2,3,4"  # 2,3,4 coinquilini
         }
         
@@ -363,7 +362,7 @@ class IdealistaAPI:
                 "select": {"name": "Idealista"}
             },
             "new_gender": {
-                "select": {"name": new_gender} if new_gender else None
+                "select": {"name": new_gender} if new_gender in ["male", "female"] else None
             },
             "housemates": {
                 "rich_text": [{"text": {"content": housemates}}] if housemates else None
