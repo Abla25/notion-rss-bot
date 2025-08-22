@@ -2,7 +2,7 @@ name: Export Idealista Data
 
 on:
   schedule:
-    # Esegui ogni 6 ore
+    # Esegui ogni 6 ore daje
     - cron: '0 */6 * * *'
   workflow_dispatch: # Permette esecuzione manuale
   workflow_run:
