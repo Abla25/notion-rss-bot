@@ -4,7 +4,6 @@ Script per popolare gradualmente il database Idealista
 Rispetta i limiti: 25 richieste/mese = ~1 richiesta/giorno
 """
 
-import os
 import time
 from datetime import datetime, timedelta
 from idealista_module import IdealistaAPI
@@ -24,21 +23,10 @@ def main():
     print()
     
     # Controlla se è il momento di aggiornare (1 volta al giorno)
-    last_update_file = "last_idealista_update.txt"
     today = datetime.now().date()
-    
-    if os.path.exists(last_update_file):
-        with open(last_update_file, 'r') as f:
-            last_update_str = f.read().strip()
-            try:
-                last_update = datetime.fromisoformat(last_update_str).date()
-                if today == last_update:
-                    print("✅ Already updated today, skipping...")
-                    return
-            except ValueError:
-                print("⚠️ Invalid last update timestamp, proceeding...")
-    
     print(f"📅 Starting Idealista update for {today}")
+    
+    # Nota: Il controllo giornaliero viene gestito dal rate limiter dell'API
     
     # Fetch solo la prima pagina (50 risultati)
     listings = api.fetch_listings(page=1, max_items=50)
@@ -82,9 +70,8 @@ def main():
     # Marca come expired quelli non più attivi
     api.mark_expired_listings(active_codes)
     
-    # Salva timestamp aggiornamento
-    with open(last_update_file, 'w') as f:
-        f.write(datetime.now().isoformat())
+    # Nota: Non salviamo più il timestamp in un file per evitare problemi di permessi
+    # Il timestamp viene gestito internamente dal modulo API
     
     print(f"\n🎉 Idealista update completed!")
     print(f"   📊 Total processed: {len(listings)}")

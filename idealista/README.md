@@ -55,6 +55,8 @@ Properties:
 - publication_date (Date)
 - last_seen (Date)
 - source (Select: "Idealista")
+- new_gender (Select: male/female/mixed)
+- housemates (Text: numero coinquilini)
 ```
 
 ## 🚀 Utilizzo

@@ -107,7 +107,10 @@ class IdealistaAPI:
             "sinceDate": "W",  # Last week
             "order": "publicationDate",
             "sort": "desc",
-            "locale": "es"
+            "locale": "es",
+            # Room-specific filters
+            "newGender": "mixed",  # male, female, mixed
+            "housemates": "2,3,4"  # 2,3,4 coinquilini
         }
         
         # Debug: stampa i parametri
@@ -297,6 +300,10 @@ class IdealistaAPI:
         new_development = listing.get("newDevelopment", False)
         publication_date = listing.get("publicationDate", "")
         
+        # Room-specific filters
+        new_gender = listing.get("newGender", "")
+        housemates = listing.get("housemates", "")
+        
         properties = {
             "property_code": {
                 "rich_text": [{"text": {"content": property_code}}]
@@ -354,6 +361,12 @@ class IdealistaAPI:
             },
             "source": {
                 "select": {"name": "Idealista"}
+            },
+            "new_gender": {
+                "select": {"name": new_gender} if new_gender else None
+            },
+            "housemates": {
+                "rich_text": [{"text": {"content": housemates}}] if housemates else None
             },
             "last_seen": {
                 "date": {"start": datetime.now().isoformat()}
