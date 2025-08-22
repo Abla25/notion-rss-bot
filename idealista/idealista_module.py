@@ -55,8 +55,14 @@ class IdealistaAPI:
         
         response = requests.post(
             "https://api.idealista.com/oauth/token",
-            headers={"Authorization": f"Basic {auth_b64}"},
-            data={"grant_type": "client_credentials"}
+            headers={
+                "Authorization": f"Basic {auth_b64}",
+                "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+            },
+            data={
+                "grant_type": "client_credentials",
+                "scope": "read"
+            }
         )
         
         if response.status_code == 200:
@@ -91,6 +97,7 @@ class IdealistaAPI:
         print(f"📡 Fetching Idealista listings (page {page}, max {max_items})...")
         
         params = {
+            "country": "es",
             "operation": "rent",
             "propertyType": "bedrooms",
             "locationId": "Barcelona",
@@ -98,23 +105,32 @@ class IdealistaAPI:
             "numPage": page,
             "sinceDate": "W",  # Last week
             "order": "publicationDate",
-            "sort": "desc"
+            "sort": "desc",
+            "locale": "es"
         }
+        
+        # Debug: stampa i parametri
+        print(f"🔍 API Parameters: {params}")
         
         try:
             # Aggiorna timestamp ultima richiesta
             self.last_request_time = time.time()
             
+            # Richiesta con parametri corretti secondo documentazione
             response = requests.post(
                 "https://api.idealista.com/3.5/es/search",
-                headers={"Authorization": f"Bearer {self.access_token}"},
-                json=params
+                headers={
+                    "Authorization": f"Bearer {self.access_token}",
+                    "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8"
+                },
+                data=params
             )
             
             if response.status_code == 200:
                 data = response.json()
                 listings = data.get("elementList", [])
                 print(f"✅ Fetched {len(listings)} listings from Idealista")
+                print(f"🎯 Parametri inviati: {response.request.body}")
                 
                 # Traccia chiamata di successo
                 self.api_tracker.record_call(success=True)
@@ -123,6 +139,7 @@ class IdealistaAPI:
             else:
                 error_msg = f"HTTP {response.status_code}: {response.text}"
                 print(f"❌ Failed to fetch listings: {error_msg}")
+                print(f"🔍 Response headers: {dict(response.headers)}")
                 
                 # Traccia chiamata fallita
                 self.api_tracker.record_call(success=False, error_message=error_msg)
