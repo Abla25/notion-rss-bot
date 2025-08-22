@@ -118,9 +118,21 @@ async function main() {
   const raw = await fetchAllIdealistaPages();
   const mapped = raw.map(parseIdealistaPage);
   
-  // Filtra solo quelli con dati validi
+  // Debug: mostra cosa abbiamo
+  console.log(`📊 Raw listings: ${raw.length}`);
+  console.log(`📊 Mapped listings: ${mapped.length}`);
+  
+  // Debug: mostra primi 3 annunci
+  if (mapped.length > 0) {
+    console.log("🔍 First 3 listings:");
+    mapped.slice(0, 3).forEach((listing, i) => {
+      console.log(`  ${i+1}. Title: "${listing.title}", Price: ${listing.price}, PropertyCode: "${listing.propertyCode}"`);
+    });
+  }
+  
+  // Filtra solo quelli con dati validi (rilassato)
   const validListings = mapped.filter(listing => 
-    listing.title && listing.propertyCode && listing.price
+    listing.propertyCode && (listing.title || listing.price)
   );
   
   console.log(`📊 Valid listings: ${validListings.length}/${mapped.length}`);

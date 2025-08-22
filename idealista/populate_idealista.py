@@ -12,6 +12,11 @@ from idealista_module import IdealistaAPI
 def main():
     print("🏠 Starting Idealista database population...")
     
+    # TESTING MODE: Skip API calls
+    print("🧪 TESTING MODE: Skipping API calls to avoid rate limits")
+    print("📊 Using existing database data only")
+    return
+    
     try:
         api = IdealistaAPI()
     except ValueError as e:
