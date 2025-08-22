@@ -1,8 +1,25 @@
 {
-  "generatedAt": "2025-08-22T02:02:14.398Z",
-  "count": 103,
-  "totalRejectedCount": 157,
+  "generatedAt": "2025-08-22T03:15:02.038Z",
+  "count": 104,
+  "totalRejectedCount": 165,
   "results": [
+    {
+      "id": "257b5f64-9329-816d-ae6a-cb55b016f7f5",
+      "title": "Long-term apartment rental in Barcelona",
+      "overview": "Apartment for rent in Sant-Gervasi Galvany, Barcelona, with 2 bedrooms, living room, kitchen, and bathroom, available for long-term rental from September 1",
+      "description": "АРЕНДА КВАРТИРЫ В БАРСЕЛОНЕ НА ДЛИТЕЛЬНЫЙ ПЕРИОД. Стоимость €2500/мес. Район Sant-Gervasi Galvany 2 спальни, гостиная с террасой, кухня, один санузел. Балкон, внутреннее патио. Квартира с мебелью и всей бытовой техникой. Климатическая система на всю квартиру с приточной вентиляцией. В стоимость входит уборка раз в неделю. Новый дом 2023 года постройки с б бассейном и террасой на крыше. Подземный паркинг. Есть возможность снять кладовку за доп. плату. Квартира готова к заселению 1 сентября. Telegram: @AlexandrLos What’sApp: [PHONE NUMBER CENSORED]",
+      "price": "€2500/month",
+      "zone": "Sant-Gervasi Galvany, Barcelona",
+      "zoneMacro": "Sarrià-Sant Gervasi",
+      "rooms": "2",
+      "reliability": 5,
+      "reliabilityReason": "The post includes a detailed description, photos, and contact information, and does not seem to be a scam",
+      "datePublished": "",
+      "dateAdded": "2025-08-22T03:11:00.000+00:00",
+      "link": "https://www.facebook.com/groups/2723040451261813/posts/4297418790490630/",
+      "status": "active",
+      "imageUrl": "https://scontent.fjai1-2.fna.fbcdn.net/v/t39.30808-6/537101303_24486531277649620_5137922531954659133_n.jpg?stp=dst-jpg_p417x417_tt6&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=lLBVnVIGk2AQ7kNvwF0jFQX&_nc_oc=Adn-0sUwsLLzhsaSfdCK9QUEvIJ0lOS9wvpzU4MSc5AeG9XS2kQJcQxiRzmYn1XQIribJIy71ruXxsrIbr3agg97&_nc_zt=23&_nc_ht=scontent.fjai1-2.fna&_nc_gid=ojgus-WzM0STFlXLTWWkiw&oh=00_AfWLfKxPO8TieyGmPIsQVxX_92WAYYZCQ68i-FTQL7SB3A&oe=68ADA336"
+    },
     {
       "id": "257b5f64-9329-812e-98f9-f9b764597eea",
       "title": "Studio for rent for a couple",
