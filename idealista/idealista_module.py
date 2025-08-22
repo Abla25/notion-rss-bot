@@ -328,9 +328,6 @@ class IdealistaAPI:
             "address": {
                 "rich_text": [{"text": {"content": address}}]
             },
-            "district": {
-                "select": {"name": district} if district else None
-            },
             "neighborhood": {
                 "rich_text": [{"text": {"content": neighborhood}}]
             },
@@ -361,16 +358,20 @@ class IdealistaAPI:
             "source": {
                 "select": {"name": "Idealista"}
             },
-            "new_gender": {
-                "select": {"name": new_gender} if new_gender in ["male", "female"] else None
-            },
-            "housemates": {
-                "rich_text": [{"text": {"content": housemates}}] if housemates else None
-            },
             "last_seen": {
                 "date": {"start": datetime.now().isoformat()}
             }
         }
+        
+        # Aggiungi proprietà condizionali solo se hanno valori validi
+        if district:
+            properties["district"] = {"select": {"name": district}}
+            
+        if new_gender in ["male", "female"]:
+            properties["new_gender"] = {"select": {"name": new_gender}}
+            
+        if housemates:
+            properties["housemates"] = {"rich_text": [{"text": {"content": housemates}}]}
         
         # Add publication_date if available
         if publication_date:
@@ -378,8 +379,7 @@ class IdealistaAPI:
                 "date": {"start": publication_date}
             }
         
-        # Remove None values
-        return {k: v for k, v in properties.items() if v is not None}
+        return properties
     
     def mark_expired_listings(self, active_property_codes: List[str]):
         """Mark listings as expired if not in active list"""

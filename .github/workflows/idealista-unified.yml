@@ -6,6 +6,9 @@ on:
     - cron: '0 8 * * *'
   workflow_dispatch: # Permette esecuzione manuale
 
+permissions:
+  contents: write   # serve per fare commit del data-idealista.json
+
 jobs:
   idealista-unified:
     runs-on: ubuntu-latest
@@ -50,10 +53,20 @@ jobs:
       run: |
         node idealista/fetch_idealista.js
         
-    - name: Deploy to GitHub Pages
+    # Pull delle modifiche remote prima del commit
+    - name: Pull modifiche remote
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add public/data-idealista.json
-        git commit -m "Update Idealista data export" || echo "No changes to commit"
-        git push
+        git config --global user.name 'GitHub Action'
+        git config --global user.email 'action@github.com'
+        git pull origin V2 --rebase || echo "No remote changes to pull"
+
+    - name: Commit e push se ci sono cambiamenti
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: "feat: aggiorna data-idealista.json"
+        file_pattern: |
+          public/data-idealista.json
+        commit_user_name: 'GitHub Action'
+        commit_user_email: 'action@github.com'
+        commit_options: '--no-verify'
+        push_options: '--force-with-lease'
