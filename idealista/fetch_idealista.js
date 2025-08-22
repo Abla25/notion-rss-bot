@@ -106,6 +106,8 @@ function parseIdealistaPage(page) {
     newDevelopment: get("new_development", "checkbox"),
     publicationDate: get("publication_date", "date"),
     lastSeen: get("last_seen", "date"),
+    newGender: get("new_gender", "select"),
+    housemates: get("housemates", "rich"),
     source: "Idealista"
   };
 }

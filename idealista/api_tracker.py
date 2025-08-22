@@ -31,9 +31,9 @@ class APITracker:
             "last_call": None,
             "rate_limit": {
                 "monthly_limit": 25,
-                "daily_limit": 2,  # Temporaneamente aumentato a 2/giorno
+                "daily_limit": 1,  # Tornato a 1/giorno per rispettare limiti
                 "remaining_monthly": 25,
-                "remaining_daily": 2
+                "remaining_daily": 1
             },
             "created_at": datetime.now().isoformat(),
             "updated_at": datetime.now().isoformat()
@@ -116,7 +116,7 @@ class APITracker:
         daily_calls = self.data["daily_calls"][current_day]["calls"]
         
         self.data["rate_limit"]["remaining_monthly"] = max(0, 25 - monthly_calls)
-        self.data["rate_limit"]["remaining_daily"] = max(0, 2 - daily_calls)
+        self.data["rate_limit"]["remaining_daily"] = max(0, 1 - daily_calls)
         
         # Salva
         self._save_tracker()
@@ -138,7 +138,7 @@ class APITracker:
             "remaining_monthly": self.data["rate_limit"]["remaining_monthly"],
             "remaining_daily": self.data["rate_limit"]["remaining_daily"],
             "last_call": self.data["last_call"],
-            "can_make_call": daily_calls < 2 and monthly_calls < 25,
+            "can_make_call": daily_calls < 1 and monthly_calls < 25,
             "rate_limiting": {
                 "min_interval": 3.0,
                 "description": "1 request every 3 seconds"

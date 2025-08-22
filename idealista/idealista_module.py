@@ -4,7 +4,7 @@ import json
 import time
 import base64
 from datetime import datetime, timedelta
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Set
 from api_tracker import APITracker
 
 class IdealistaAPI:
@@ -75,8 +75,8 @@ class IdealistaAPI:
             print(f"❌ Authentication failed: {response.status_code} - {response.text}")
             return False
     
-    def fetch_listings(self, page: int = 1, max_items: int = 50) -> List[Dict]:
-        """Fetch listings from Idealista API"""
+    def fetch_listings(self, page: int = 1, max_items: int = 50, exclude_codes: Set[str] = None) -> List[Dict]:
+        """Fetch listings from Idealista API, excluding existing property codes"""
         if not self.authenticate():
             return []
         
@@ -84,6 +84,7 @@ class IdealistaAPI:
         status = self.api_tracker.get_status()
         if not status["can_make_call"]:
             print(f"❌ Cannot make API call: {status['current_day_calls']}/1 daily, {status['current_month_calls']}/25 monthly")
+            print(f"⏰ Next available: {status.get('next_available', 'unknown')}")
             return []
         
         # Controlla rate limiting (1 richiesta ogni 3 secondi)
@@ -111,6 +112,11 @@ class IdealistaAPI:
             # Room-specific filters
             "housemates": "2,3,4"  # 2,3,4 coinquilini
         }
+        
+        # Nota: Idealista API non supporta esclusione diretta via parametri
+        # Il filtro viene applicato dopo la risposta
+        if exclude_codes:
+            print(f"🚫 Will filter out {len(exclude_codes)} existing listings from response")
         
         # Debug: stampa i parametri
         print(f"🔍 API Parameters: {params}")
@@ -161,39 +167,60 @@ class IdealistaAPI:
     def save_to_notion(self, listing: Dict) -> Optional[str]:
         """Save listing to Notion database"""
         try:
-            # Extract data from Idealista response
-            property_code = listing.get("propertyCode", "")
-            title = listing.get("title", "")
-            description = listing.get("description", "")
-            price = listing.get("price", 0)
-            rooms = listing.get("rooms", 0)
-            bathrooms = listing.get("bathrooms", 0)
-            size = listing.get("size", 0)
-            address = listing.get("address", "")
-            district = listing.get("district", "")
-            neighborhood = listing.get("neighborhood", "")
-            municipality = listing.get("municipality", "")
-            province = listing.get("province", "")
-            latitude = listing.get("latitude", 0)
-            longitude = listing.get("longitude", 0)
-            url = listing.get("url", "")
-            thumbnail = listing.get("thumbnail", "")
-            new_development = listing.get("newDevelopment", False)
-            publication_date = listing.get("publicationDate", "")
-            
-            # Check if listing already exists
-            existing_page_id = self.find_existing_listing(property_code)
-            
-            if existing_page_id:
-                # Update existing listing
-                return self.update_existing_listing(existing_page_id, listing)
-            else:
-                # Create new listing
-                return self.create_new_listing(listing)
+            # Create new listing (we already filtered out existing ones)
+            return self.create_new_listing(listing)
                 
         except Exception as e:
             print(f"❌ Error saving listing to Notion: {e}")
             return None
+    
+    def get_existing_property_codes(self) -> Set[str]:
+        """Get all existing property codes from database"""
+        existing_codes = set()
+        page = 0
+        
+        while True:
+            query_payload = {
+                "page_size": 100,
+                "start_cursor": page
+            }
+            
+            try:
+                response = requests.post(
+                    f"https://api.notion.com/v1/databases/{self.notion_db_id}/query",
+                    headers=self.notion_headers,
+                    json=query_payload
+                )
+                
+                if response.status_code != 200:
+                    print(f"❌ Error querying database: {response.text}")
+                    break
+                    
+                data = response.json()
+                listings = data.get("results", [])
+                
+                if not listings:
+                    break
+                
+                # Extract property codes
+                for listing in listings:
+                    props = listing.get("properties", {})
+                    property_code_prop = props.get("property_code", {})
+                    property_code = property_code_prop.get("rich_text", [{}])[0].get("text", {}).get("content", "")
+                    if property_code:
+                        existing_codes.add(property_code)
+                
+                # Check if there are more pages
+                if not data.get("has_more"):
+                    break
+                    
+                page = data.get("next_cursor")
+                
+            except Exception as e:
+                print(f"❌ Error getting existing codes: {e}")
+                break
+        
+        return existing_codes
     
     def find_existing_listing(self, property_code: str) -> Optional[str]:
         """Find existing listing by property_code"""
@@ -382,67 +409,106 @@ class IdealistaAPI:
         return properties
     
     def mark_expired_listings(self, active_property_codes: List[str]):
-        """Mark listings as expired if not in active list"""
+        """Mark listings as expired if not in active list - OPTIMIZED"""
         print(f"🗑️ Checking for expired listings...")
         
-        # Get all active listings
-        query_payload = {
-            "filter": {
-                "property": "status",
-                "select": {
-                    "equals": "active"
-                }
-            },
-            "page_size": 100
-        }
+        # Convert active_codes to set for O(1) lookup
+        active_codes_set = set(active_property_codes)
+        expired_count = 0
+        page = 0
         
-        try:
-            response = requests.post(
-                f"https://api.notion.com/v1/databases/{self.notion_db_id}/query",
-                headers=self.notion_headers,
-                json=query_payload
-            )
+        while True:
+            # Get active listings with pagination
+            query_payload = {
+                "filter": {
+                    "property": "status",
+                    "select": {"equals": "active"}
+                },
+                "page_size": 100,
+                "start_cursor": page
+            }
             
-            if response.status_code == 200:
+            try:
+                response = requests.post(
+                    f"https://api.notion.com/v1/databases/{self.notion_db_id}/query",
+                    headers=self.notion_headers,
+                    json=query_payload
+                )
+                
+                if response.status_code != 200:
+                    print(f"❌ Error querying database: {response.text}")
+                    break
+                    
                 data = response.json()
                 active_listings = data.get("results", [])
                 
-                expired_count = 0
+                if not active_listings:
+                    break
+                
+                # Process listings in batch
+                expired_page_ids = []
                 for listing in active_listings:
                     props = listing.get("properties", {})
                     property_code_prop = props.get("property_code", {})
                     property_code = property_code_prop.get("rich_text", [{}])[0].get("text", {}).get("content", "")
                     
-                    if property_code and property_code not in active_property_codes:
-                        # Mark as expired
-                        page_id = listing["id"]
-                        self._mark_listing_expired(page_id)
-                        expired_count += 1
+                    if property_code and property_code not in active_codes_set:
+                        expired_page_ids.append(listing["id"])
                 
-                print(f"✅ Marked {expired_count} listings as expired")
+                # Batch update expired listings
+                if expired_page_ids:
+                    self._batch_mark_expired(expired_page_ids)
+                    expired_count += len(expired_page_ids)
                 
-        except Exception as e:
-            print(f"❌ Error checking expired listings: {e}")
+                # Check if there are more pages
+                if not data.get("has_more"):
+                    break
+                    
+                page = data.get("next_cursor")
+                
+            except Exception as e:
+                print(f"❌ Error checking expired listings: {e}")
+                break
+        
+        print(f"✅ Marked {expired_count} listings as expired")
+    
+    def _batch_mark_expired(self, page_ids: List[str]):
+        """Mark multiple listings as expired in batch"""
+        if not page_ids:
+            return
+            
+        print(f"🔄 Marking {len(page_ids)} listings as expired...")
+        
+        # Process in smaller batches to avoid rate limits
+        batch_size = 10
+        for i in range(0, len(page_ids), batch_size):
+            batch = page_ids[i:i + batch_size]
+            
+            # Update each listing in the batch
+            for page_id in batch:
+                try:
+                    payload = {
+                        "properties": {
+                            "status": {"select": {"name": "expired"}}
+                        }
+                    }
+                    
+                    response = requests.patch(
+                        f"https://api.notion.com/v1/pages/{page_id}",
+                        headers=self.notion_headers,
+                        json=payload
+                    )
+                    
+                    if response.status_code != 200:
+                        print(f"❌ Failed to mark listing {page_id} as expired: {response.text}")
+                        
+                except Exception as e:
+                    print(f"❌ Error marking listing {page_id} as expired: {e}")
+            
+            # Small delay between batches
+            if i + batch_size < len(page_ids):
+                time.sleep(1)
     
     def _mark_listing_expired(self, page_id: str):
-        """Mark a single listing as expired"""
-        try:
-            payload = {
-                "properties": {
-                    "status": {
-                        "select": {"name": "expired"}
-                    }
-                }
-            }
-            
-            response = requests.patch(
-                f"https://api.notion.com/v1/pages/{page_id}",
-                headers=self.notion_headers,
-                json=payload
-            )
-            
-            if response.status_code != 200:
-                print(f"❌ Failed to mark listing {page_id} as expired: {response.text}")
-                
-        except Exception as e:
-            print(f"❌ Error marking listing {page_id} as expired: {e}")
+        """Mark a single listing as expired (legacy method)"""
+        self._batch_mark_expired([page_id])
