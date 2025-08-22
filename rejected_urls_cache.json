@@ -1,29 +1,5 @@
 {
   "urls": {
-    "https://www.facebook.com/groups/2723040451261813/posts/4295959347303241/": {
-      "reason": "AI_NOT_RELEVANT",
-      "timestamp": "2025-08-20T17:21:31.187949"
-    },
-    "https://www.facebook.com/groups/2723040451261813/posts/4295953273970515/": {
-      "reason": "AI_NOT_RELEVANT",
-      "timestamp": "2025-08-20T17:21:31.188821"
-    },
-    "https://www.facebook.com/groups/2723040451261813/posts/4295952343970608/": {
-      "reason": "AI_NOT_RELEVANT",
-      "timestamp": "2025-08-20T17:22:15.635186"
-    },
-    "https://www.facebook.com/groups/2723040451261813/posts/4295941750638334/": {
-      "reason": "AI_NOT_RELEVANT",
-      "timestamp": "2025-08-20T17:22:15.635975"
-    },
-    "https://www.facebook.com/groups/2723040451261813/posts/4295815013984341/": {
-      "reason": "AI_NOT_RELEVANT",
-      "timestamp": "2025-08-20T17:22:15.636868"
-    },
-    "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1069242738714591/": {
-      "reason": "AI_NOT_RELEVANT",
-      "timestamp": "2025-08-20T18:35:18.413136"
-    },
     "https://www.facebook.com/groups/2723040451261813/posts/4296057577293418/": {
       "reason": "AI_NOT_RELEVANT",
       "timestamp": "2025-08-20T19:19:17.703318"
@@ -947,8 +923,64 @@
     "https://www.facebook.com/groups/1674520359717832/posts/2235430433626819/": {
       "reason": "AI_NOT_RELEVANT",
       "timestamp": "2025-08-22T17:38:53.099319"
+    },
+    "https://www.facebook.com/groups/2723040451261813/posts/4298326347066541/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T19:19:43.695059"
+    },
+    "https://www.facebook.com/groups/2723040451261813/posts/4298299167069259/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T19:19:43.696567"
+    },
+    "https://www.facebook.com/groups/2723040451261813/posts/4298296687069507/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T19:19:43.698137"
+    },
+    "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1070923625213169/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T19:38:47.341645"
+    },
+    "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1070910225214509/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T19:38:47.343127"
+    },
+    "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1070907958548069/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T19:40:09.239404"
+    },
+    "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1070904695215062/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T19:40:09.240844"
+    },
+    "https://www.facebook.com/groups/1674520359717832/posts/2235622236940972/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T19:45:57.523260"
+    },
+    "https://www.facebook.com/groups/1674520359717832/posts/2235598290276700/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T19:49:30.857624"
+    },
+    "https://www.facebook.com/groups/1674520359717832/posts/2235585116944684/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T19:49:30.859070"
+    },
+    "https://www.facebook.com/groups/1674520359717832/posts/2235503553619507/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T19:49:30.860674"
+    },
+    "https://www.facebook.com/groups/1674520359717832/posts/2235392546963941/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T19:50:47.460063"
+    },
+    "https://www.facebook.com/groups/apartamentosbarcelona/posts/4015010828828543/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T20:04:37.980056"
+    },
+    "https://www.facebook.com/groups/986691378511610/posts/2178269229353813/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-22T20:15:34.334618"
     }
   },
-  "total_rejected_count": 264,
-  "timestamp": "2025-08-22T17:21:19.879732"
+  "total_rejected_count": 278,
+  "timestamp": "2025-08-22T19:19:12.923994"
 }
