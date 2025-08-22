@@ -100,7 +100,8 @@ class IdealistaAPI:
             "country": "es",
             "operation": "rent",
             "propertyType": "bedrooms",
-            "locationId": "Barcelona",
+            "center": "41.3851,2.1734",  # Coordinate centro Barcellona
+            "distance": 8000,             # 8km dal centro
             "maxItems": max_items,
             "numPage": page,
             "sinceDate": "W",  # Last week
