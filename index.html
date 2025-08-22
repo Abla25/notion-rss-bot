@@ -750,6 +750,36 @@
       border-color: rgba(5, 150, 105, 0.3);
     }
 
+    /* Source badges */
+    .source-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.25rem 0.5rem;
+      border-radius: 6px;
+      margin-bottom: 0.5rem;
+      transition: all 0.2s ease;
+    }
+
+    .source-badge.facebook {
+      background: rgba(59, 130, 246, 0.1);
+      color: #3b82f6;
+      border: 1px solid rgba(59, 130, 246, 0.2);
+    }
+
+    .source-badge.idealista {
+      background: rgba(139, 92, 246, 0.1);
+      color: #8b5cf6;
+      border: 1px solid rgba(139, 92, 246, 0.2);
+    }
+
+    .source-badge:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
     .rating-info {
       position: absolute;
       left: -24px;
@@ -1375,6 +1405,158 @@
       stroke-width: 2;
       fill: none;
     }
+
+    /* Mix Control Panel */
+    .mix-control-panel {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      border: 1px solid rgba(226, 232, 240, 0.8);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    .mix-control-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: #374151;
+    }
+
+    .mix-control-header svg {
+      width: 20px;
+      height: 20px;
+      color: #6b7280;
+    }
+
+    .mix-control-options {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .mix-option {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border: 2px solid #e5e7eb;
+      border-radius: 8px;
+      background: white;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+
+    .mix-option:hover {
+      border-color: #3b82f6;
+      background: rgba(59, 130, 246, 0.05);
+    }
+
+    .mix-option.active {
+      border-color: #3b82f6;
+      background: rgba(59, 130, 246, 0.1);
+      color: #3b82f6;
+    }
+
+    .mix-option input[type="radio"] {
+      margin: 0;
+    }
+
+    .mix-slider-container {
+      display: none;
+      margin-top: 1rem;
+    }
+
+    .mix-slider-container.show {
+      display: block;
+    }
+
+    .mix-slider-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .mix-slider-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      color: #6b7280;
+      margin-top: 0.5rem;
+    }
+
+    .mix-slider {
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: linear-gradient(to right, #3b82f6 0%, #8b5cf6 100%);
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    .mix-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: white;
+      border: 2px solid #3b82f6;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .mix-slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: white;
+      border: 2px solid #3b82f6;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .mix-percentage {
+      font-weight: 600;
+      color: #3b82f6;
+      font-size: 1.125rem;
+    }
+
+    .mix-stats {
+      display: flex;
+      gap: 2rem;
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid #e5e7eb;
+    }
+
+    .mix-stat {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      color: #6b7280;
+    }
+
+    .mix-stat-value {
+      font-weight: 600;
+      color: #374151;
+    }
+
+    /* Conditional filters */
+    .filter-group.idealista-only {
+      display: none;
+    }
+
+    .filter-group.idealista-only.show {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -1400,6 +1582,62 @@
   </header>
 
   <div class="container">
+    <!-- Mix Control Panel -->
+    <div class="mix-control-panel">
+      <div class="mix-control-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+        </svg>
+        Content Mix Control
+      </div>
+      
+      <div class="mix-control-options">
+        <label class="mix-option active">
+          <input type="radio" name="mix-mode" value="balanced" checked>
+          <span>📊 Balanced Mix</span>
+        </label>
+        <label class="mix-option">
+          <input type="radio" name="mix-mode" value="facebook">
+          <span>📌 Facebook Only</span>
+        </label>
+        <label class="mix-option">
+          <input type="radio" name="mix-mode" value="idealista">
+          <span>🏠 Idealista Only</span>
+        </label>
+        <label class="mix-option">
+          <input type="radio" name="mix-mode" value="custom">
+          <span>⚙️ Custom Mix</span>
+        </label>
+      </div>
+      
+      <div class="mix-slider-container" id="mix-slider-container">
+        <div class="mix-slider-header">
+          <span>Facebook vs Idealista Ratio</span>
+          <span class="mix-percentage" id="mix-percentage">70% Facebook • 30% Idealista</span>
+        </div>
+        <input type="range" class="mix-slider" id="mix-slider" min="0" max="100" value="70">
+        <div class="mix-slider-labels">
+          <span>📌 All Facebook</span>
+          <span>🏠 All Idealista</span>
+        </div>
+      </div>
+      
+      <div class="mix-stats">
+        <div class="mix-stat">
+          <span>📌 Facebook:</span>
+          <span class="mix-stat-value" id="facebook-count">0</span>
+        </div>
+        <div class="mix-stat">
+          <span>🏠 Idealista:</span>
+          <span class="mix-stat-value" id="idealista-count">0</span>
+        </div>
+        <div class="mix-stat">
+          <span>📊 Total:</span>
+          <span class="mix-stat-value" id="total-count">0</span>
+        </div>
+      </div>
+    </div>
+
     <div class="filters">
       <div class="filter-row">
         <div class="filter-group">
@@ -1413,6 +1651,61 @@
           <select id="filter-zone">
             <option value="">All zones</option>
           </select>
+        </div>
+        <div class="filter-group">
+          <label>
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+            </svg>
+            Source
+          </label>
+          <select id="filter-source">
+            <option value="">All sources</option>
+            <option value="Facebook">📌 Facebook</option>
+            <option value="Idealista">🏠 Idealista</option>
+          </select>
+        </div>
+        <div class="filter-group idealista-only">
+          <label>
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M3 7V5a2 2 0 0 1 2-2h2"></path>
+              <path d="M17 3h2a2 2 0 0 1 2 2v2"></path>
+              <path d="M21 17v2a2 2 0 0 1-2 2h-2"></path>
+              <path d="M7 21H5a2 2 0 0 1-2-2v-2"></path>
+            </svg>
+            Rooms
+          </label>
+          <select id="filter-rooms">
+            <option value="">Any</option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
+          </select>
+        </div>
+        <div class="filter-group idealista-only">
+          <label>
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <path d="M22 6l-10 7L2 6"></path>
+            </svg>
+            Bathrooms
+          </label>
+          <select id="filter-bathrooms">
+            <option value="">Any</option>
+            <option value="1">1+</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+          </select>
+        </div>
+        <div class="filter-group idealista-only">
+          <label>
+            <svg class="icon" viewBox="0 0 24 24">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+            </svg>
+            Size (m²)
+          </label>
+          <input type="number" id="filter-size" placeholder="Min size">
         </div>
         <div class="filter-group">
           <label>
@@ -1523,6 +1816,12 @@
     let filteredListings = [];
     let currentPage = 1;
     let itemsPerPage = 20;
+    
+    // Mix control variables
+    let facebookListings = [];
+    let idealistaListings = [];
+    let mixMode = 'balanced';
+    let facebookPercentage = 70;
 
     // Force refresh to avoid cache
     if (performance.navigation.type === 1) {
@@ -1532,12 +1831,30 @@
     // Event listeners - defined before loadListings
     function setupEventListeners() {
       try {
+        // Existing filters
         document.getElementById('filter-zone').addEventListener('change', applyFilters);
+        document.getElementById('filter-source').addEventListener('change', applyFilters);
         document.getElementById('filter-reliability').addEventListener('change', applyFilters);
         document.getElementById('filter-price').addEventListener('input', applyFilters);
         document.getElementById('filter-date').addEventListener('change', applyFilters);
         document.getElementById('sort-by').addEventListener('change', applySorting);
         document.getElementById('items-per-page').addEventListener('change', changeItemsPerPage);
+        
+        // Mix control
+        document.querySelectorAll('input[name="mix-mode"]').forEach(radio => {
+          radio.addEventListener('change', handleMixModeChange);
+        });
+        
+        const mixSlider = document.getElementById('mix-slider');
+        if (mixSlider) {
+          mixSlider.addEventListener('input', handleMixSliderChange);
+        }
+        
+        // Idealista-specific filters
+        document.getElementById('filter-rooms')?.addEventListener('change', applyFilters);
+        document.getElementById('filter-bathrooms')?.addEventListener('change', applyFilters);
+        document.getElementById('filter-size')?.addEventListener('input', applyFilters);
+        
         console.log("✅ Event listeners configured");
       } catch (error) {
         console.error("❌ Error configuring event listeners:", error);
@@ -1549,42 +1866,60 @@
         console.log("=== STARTING DATA LOADING ===");
         console.log("Timestamp:", new Date().toISOString());
         
-        // Add timestamp to avoid cache
-        const response = await fetch("public/data.json?t=" + Date.now());
+        // Load both Facebook and Idealista data
+        const [facebookResponse, idealistaResponse] = await Promise.all([
+          fetch("public/data.json?t=" + Date.now()),
+          fetch("public/data-idealista.json?t=" + Date.now()).catch(() => null)
+        ]);
         
-        if (!response.ok) {
-          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        if (!facebookResponse.ok) {
+          throw new Error(`HTTP ${facebookResponse.status}: ${facebookResponse.statusText}`);
         }
         
-        const data = await response.json();
-        console.log("=== DATA RECEIVED ===");
-        console.log("Data type:", typeof data);
-        console.log("Is it an array?", Array.isArray(data));
-        console.log("Has 'results' property?", data.hasOwnProperty('results'));
-        console.log("Object properties:", Object.keys(data));
+        const facebookData = await facebookResponse.json();
+        console.log("=== FACEBOOK DATA RECEIVED ===");
+        console.log("Facebook data properties:", Object.keys(facebookData));
         
         // Carica il contatore dei post scartati
-        window.totalRejectedCount = data.totalRejectedCount || 0;
+        window.totalRejectedCount = facebookData.totalRejectedCount || 0;
         console.log(`📊 Total rejected posts by AI: ${window.totalRejectedCount}`);
         
-        // Check data structure
-        if (data.results && Array.isArray(data.results)) {
-          allListings = data.results;
-          console.log(`Loaded ${allListings.length} listings from data.results`);
-        } else if (Array.isArray(data)) {
-          allListings = data;
-          console.log(`Loaded ${allListings.length} listings from direct array`);
-        } else {
-          console.log("Unexpected data structure:", data);
-          allListings = [];
+        // Process Facebook data
+        facebookListings = [];
+        if (facebookData.results && Array.isArray(facebookData.results)) {
+          facebookListings = facebookData.results.map(listing => ({
+            ...listing,
+            source: 'Facebook'
+          }));
+          console.log(`Loaded ${facebookListings.length} Facebook listings`);
         }
+        
+        // Process Idealista data
+        idealistaListings = [];
+        if (idealistaResponse && idealistaResponse.ok) {
+          const idealistaData = await idealistaResponse.json();
+          console.log("=== IDEALISTA DATA RECEIVED ===");
+          console.log("Idealista data properties:", Object.keys(idealistaData));
+          
+          if (idealistaData.results && Array.isArray(idealistaData.results)) {
+            idealistaListings = idealistaData.results.map(listing => ({
+              ...listing,
+              source: 'Idealista'
+            }));
+            console.log(`Loaded ${idealistaListings.length} Idealista listings`);
+          }
+        } else {
+          console.log("⚠️ Idealista data not available, continuing with Facebook data only");
+        }
+        
+        // Apply mix and combine listings
+        applyMixAndCombine();
+        console.log(`📊 Total listings loaded: ${allListings.length} (${facebookListings.length} Facebook + ${idealistaListings.length} Idealista)`);
 
         console.log("=== LISTING DETAILS ===");
-        console.log("First 3 listings:", allListings.slice(0, 3));
-        console.log("Last 3 listings:", allListings.slice(-3));
-        
         if (allListings.length > 0) {
-          console.log("Example listing:", allListings[0]);
+          console.log("Example Facebook listing:", facebookListings[0] || "None");
+          console.log("Example Idealista listing:", idealistaListings[0] || "None");
           console.log("Available properties:", Object.keys(allListings[0]));
         }
 
@@ -1593,6 +1928,7 @@
         populateFilters();
         applyFilters();
         updateStats();
+        updateMixStats();
         
       } catch (error) {
         console.error("=== LOADING ERROR ===", error);
@@ -1602,13 +1938,101 @@
             <h3>🚫 Loading Error</h3>
             <p>${error.message}</p>
             <p style="margin-top: 1rem; font-size: 0.875rem;">
-              Please verify that the file <code>public/data.json</code> exists and is accessible.
+              Please verify that the files <code>public/data.json</code> and <code>public/data-idealista.json</code> exist and are accessible.
             </p>
           </div>
         `;
       }
     }
 
+    // Mix control functions
+    function handleMixModeChange(event) {
+      mixMode = event.target.value;
+      
+      // Update UI
+      document.querySelectorAll('.mix-option').forEach(option => {
+        option.classList.remove('active');
+      });
+      event.target.closest('.mix-option').classList.add('active');
+      
+      // Show/hide slider
+      const sliderContainer = document.getElementById('mix-slider-container');
+      if (mixMode === 'custom') {
+        sliderContainer.classList.add('show');
+      } else {
+        sliderContainer.classList.remove('show');
+      }
+      
+      // Apply mix
+      applyMixAndCombine();
+      applyFilters();
+      updateMixStats();
+    }
+    
+    function handleMixSliderChange(event) {
+      facebookPercentage = parseInt(event.target.value);
+      const idealistaPercentage = 100 - facebookPercentage;
+      
+      // Update percentage display
+      document.getElementById('mix-percentage').textContent = 
+        `${facebookPercentage}% Facebook • ${idealistaPercentage}% Idealista`;
+      
+      // Apply mix
+      applyMixAndCombine();
+      applyFilters();
+      updateMixStats();
+    }
+    
+    function applyMixAndCombine() {
+      let selectedFacebook = [...facebookListings];
+      let selectedIdealista = [...idealistaListings];
+      
+      switch (mixMode) {
+        case 'facebook':
+          selectedIdealista = [];
+          break;
+        case 'idealista':
+          selectedFacebook = [];
+          break;
+        case 'balanced':
+          // Default 70/30 split
+          const facebookCountBalanced = Math.floor(selectedFacebook.length * 0.7);
+          const idealistaCountBalanced = Math.floor(selectedIdealista.length * 0.3);
+          selectedFacebook = selectedFacebook.slice(0, facebookCountBalanced);
+          selectedIdealista = selectedIdealista.slice(0, idealistaCountBalanced);
+          break;
+        case 'custom':
+          const facebookCountCustom = Math.floor(selectedFacebook.length * (facebookPercentage / 100));
+          const idealistaCountCustom = Math.floor(selectedIdealista.length * ((100 - facebookPercentage) / 100));
+          selectedFacebook = selectedFacebook.slice(0, facebookCountCustom);
+          selectedIdealista = selectedIdealista.slice(0, idealistaCountCustom);
+          break;
+      }
+      
+      // Combine and shuffle
+      allListings = shuffleArray([...selectedFacebook, ...selectedIdealista]);
+      console.log(`📊 Mix applied: ${selectedFacebook.length} Facebook + ${selectedIdealista.length} Idealista = ${allListings.length} total`);
+    }
+    
+    function shuffleArray(array) {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    }
+    
+    function updateMixStats() {
+      const facebookCount = allListings.filter(l => l.source === 'Facebook').length;
+      const idealistaCount = allListings.filter(l => l.source === 'Idealista').length;
+      const totalCount = allListings.length;
+      
+      document.getElementById('facebook-count').textContent = facebookCount;
+      document.getElementById('idealista-count').textContent = idealistaCount;
+      document.getElementById('total-count').textContent = totalCount;
+    }
+    
     function updateStats() {
       const statsDiv = document.getElementById('stats');
       if (allListings.length > 0) {
@@ -1637,6 +2061,19 @@
           </span>
         ` : '';
         
+        // Mostra le statistiche del mix se disponibili
+        const facebookCount = allListings.filter(l => l.source === 'Facebook').length;
+        const idealistaCount = allListings.filter(l => l.source === 'Idealista').length;
+        const mixStatsHtml = idealistaCount > 0 ? `
+          <span style="color: #6b7280;">•</span>
+          <span style="display: flex; align-items: center; gap: 0.5rem;">
+            <svg class="icon" viewBox="0 0 24 24" style="width: 16px; height: 16px; color: #3b82f6;">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+            </svg>
+            <strong>${facebookCount}</strong> Facebook • <strong>${idealistaCount}</strong> Idealista
+          </span>
+        ` : '';
+        
         statsDiv.innerHTML = `
           <div style="display: flex; align-items: center; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
             <span style="display: flex; align-items: center; gap: 0.5rem;">
@@ -1655,6 +2092,7 @@
               Updated at <strong>${timeStr}</strong>
             </span>
             ${rejectedCountHtml}
+            ${mixStatsHtml}
           </div>
         `;
         statsDiv.style.display = 'block';
@@ -1663,11 +2101,15 @@
 
     function hasFilters() {
       const zone = document.getElementById('filter-zone').value;
+      const source = document.getElementById('filter-source').value;
       const minReliability = document.getElementById('filter-reliability').value;
       const maxPrice = document.getElementById('filter-price').value;
       const dateFilter = document.getElementById('filter-date').value;
+      const minRooms = document.getElementById('filter-rooms')?.value;
+      const minBathrooms = document.getElementById('filter-bathrooms')?.value;
+      const minSize = document.getElementById('filter-size')?.value;
       
-      return zone || minReliability || maxPrice || dateFilter;
+      return zone || source || minReliability || maxPrice || dateFilter || minRooms || minBathrooms || minSize;
     }
 
     function updateActiveFilters() {
@@ -1678,6 +2120,18 @@
       
       const zone = document.getElementById('filter-zone').value;
       if (zone) filters.push({ type: 'Zone', value: zone, id: 'zone' });
+      
+      const source = document.getElementById('filter-source').value;
+      if (source) filters.push({ type: 'Source', value: source, id: 'source' });
+      
+      // Idealista-specific filters
+      const minRooms = document.getElementById('filter-rooms')?.value;
+      const minBathrooms = document.getElementById('filter-bathrooms')?.value;
+      const minSize = document.getElementById('filter-size')?.value;
+      
+      if (minRooms) filters.push({ type: 'Min Rooms', value: `${minRooms}+`, id: 'rooms' });
+      if (minBathrooms) filters.push({ type: 'Min Bathrooms', value: `${minBathrooms}+`, id: 'bathrooms' });
+      if (minSize) filters.push({ type: 'Min Size', value: `${minSize}m²+`, id: 'size' });
       
       const minReliability = document.getElementById('filter-reliability').value;
       if (minReliability) filters.push({ type: 'Min. Reliability', value: `≥ ${minReliability}`, id: 'reliability' });
@@ -1715,6 +2169,18 @@
         case 'zone':
           document.getElementById('filter-zone').value = '';
           break;
+        case 'source':
+          document.getElementById('filter-source').value = '';
+          break;
+        case 'rooms':
+          document.getElementById('filter-rooms').value = '';
+          break;
+        case 'bathrooms':
+          document.getElementById('filter-bathrooms').value = '';
+          break;
+        case 'size':
+          document.getElementById('filter-size').value = '';
+          break;
         case 'reliability':
           document.getElementById('filter-reliability').value = '';
           break;
@@ -1730,6 +2196,10 @@
 
     function clearAllFilters() {
       document.getElementById('filter-zone').value = '';
+      document.getElementById('filter-source').value = '';
+      document.getElementById('filter-rooms').value = '';
+      document.getElementById('filter-bathrooms').value = '';
+      document.getElementById('filter-size').value = '';
       document.getElementById('filter-reliability').value = '';
       document.getElementById('filter-price').value = '';
       document.getElementById('filter-date').value = '';
@@ -1750,12 +2220,28 @@
 
     function applyFilters() {
       const zone = document.getElementById('filter-zone').value;
+      const source = document.getElementById('filter-source').value;
       const minReliability = parseInt(document.getElementById('filter-reliability').value) || 0;
       const maxPrice = parseInt(document.getElementById('filter-price').value) || Infinity;
       const dateFilter = document.getElementById('filter-date').value;
+      
+      // Idealista-specific filters
+      const minRooms = parseInt(document.getElementById('filter-rooms')?.value) || 0;
+      const minBathrooms = parseInt(document.getElementById('filter-bathrooms')?.value) || 0;
+      const minSize = parseInt(document.getElementById('filter-size')?.value) || 0;
 
       console.log("=== APPLYING FILTERS ===");
-      console.log("Active filters:", { zone, minReliability, maxPrice, dateFilter });
+      console.log("Active filters:", { zone, source, minReliability, maxPrice, dateFilter, minRooms, minBathrooms, minSize });
+
+      // Show/hide Idealista-specific filters based on source selection
+      const idealistaFilters = document.querySelectorAll('.filter-group.idealista-only');
+      idealistaFilters.forEach(filter => {
+        if (source === 'Idealista' || !source) {
+          filter.classList.add('show');
+        } else {
+          filter.classList.remove('show');
+        }
+      });
 
       filteredListings = allListings.filter(l => {
         // Exclude posts with status "expired"
@@ -1764,8 +2250,14 @@
         }
         
         const zoneMatch = !zone || l.zoneMacro === zone;
+        const sourceMatch = !source || l.source === source;
         const reliabilityMatch = (l.reliability || 0) >= minReliability;
         const priceMatch = (parseInt(l.price) || 0) <= maxPrice;
+        
+        // Idealista-specific filters
+        const roomsMatch = !minRooms || (l.rooms && l.rooms >= minRooms);
+        const bathroomsMatch = !minBathrooms || (l.bathrooms && l.bathrooms >= minBathrooms);
+        const sizeMatch = !minSize || (l.size && l.size >= minSize);
         
         // Date filter - use dateAdded if available, otherwise datePublished
         let dateMatch = true;
@@ -1805,7 +2297,11 @@
           }
         }
         
-        return zoneMatch && reliabilityMatch && priceMatch && dateMatch;
+        // Apply Idealista-specific filters only if source is Idealista or no source filter
+        const idealistaFiltersMatch = (source === 'Idealista' || !source) ? 
+          (roomsMatch && bathroomsMatch && sizeMatch) : true;
+        
+        return zoneMatch && sourceMatch && reliabilityMatch && priceMatch && dateMatch && idealistaFiltersMatch;
       });
 
       console.log(`Filtered listings: ${filteredListings.length} out of ${allListings.length}`);
@@ -1936,6 +2432,9 @@
         div.innerHTML = `
           ${thumbnailHtml}
           <div class="card-content">
+            <div class="source-badge ${l.source?.toLowerCase() || 'facebook'}">
+              ${l.source === 'Idealista' ? '🏠' : '📌'} ${l.source || 'Facebook'}
+            </div>
             <div class="card-header">
               <h3 class="card-title" onclick="window.open('${l.link}', '_blank')">${l.title || "Untitled"}</h3>
               <div class="card-rating ${ratingClass}">
@@ -1996,7 +2495,7 @@
                   <polyline points="15,3 21,3 21,9"></polyline>
                   <line x1="10" y1="14" x2="21" y2="3"></line>
                 </svg>
-                View on Facebook
+                View on ${l.source === 'Idealista' ? 'Idealista' : 'Facebook'}
               </a>
             </div>
           </div>
