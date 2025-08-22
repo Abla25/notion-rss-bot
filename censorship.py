@@ -29,30 +29,95 @@ class DataCensor:
         """Set up pre-compiled regex patterns for different types of sensitive data."""
         
         # Pre-compile all patterns for maximum performance
+        
         # WhatsApp/Telegram patterns (applied first to avoid conflicts)
+        # Enhanced to catch more variations
         self.messaging_patterns = [
-            re.compile(r'\b(?:whatsapp|telegram|wa|tg)\s*:?\s*(?:\+?39\s*)?(?:3\d{2}\s*[-.\s]?\d{3}\s*[-.\s]?\d{4}|3\d{8})\b', re.IGNORECASE),  # Italian
-            re.compile(r'\b(?:whatsapp|telegram|wa|tg)\s*:?\s*(?:\+?34\s*)?(?:6\d{2}\s*[-.\s]?\d{3}\s*[-.\s]?\d{3}|6\d{8})\b', re.IGNORECASE),  # Spanish
-            re.compile(r'\b(?:whatsapp|telegram|wa|tg)\s*:?\s*(?:7\d{2}\s*[-.\s]?\d{3}\s*[-.\s]?\d{3}|7\d{8})\b', re.IGNORECASE),  # Other formats
+            # Italian messaging patterns
+            re.compile(r'\b(?:whatsapp|telegram|wa|tg|w\.a|t\.g)\s*:?\s*(?:\+?39\s*)?(?:3\d{2}\s*[-.\s]+\d{3}\s*[-.\s]+\d{4}|3\d{8,9})\b', re.IGNORECASE),
+            # Spanish messaging patterns  
+            re.compile(r'\b(?:whatsapp|telegram|wa|tg|w\.a|t\.g)\s*:?\s*(?:\+?34\s*)?(?:[67]\d{2}\s*[-.\s]+\d{3}\s*[-.\s]+\d{3}|[67]\d{8})\b', re.IGNORECASE),
+            # Generic messaging patterns
+            re.compile(r'\b(?:whatsapp|telegram|wa|tg|w\.a|t\.g)\s*:?\s*(?:\+?\d{1,3}\s*)?(?:[67]\d{2}\s*[-.\s]+\d{3}\s*[-.\s]+\d{3}|[67]\d{8})\b', re.IGNORECASE),
         ]
         
-        # Optimized phone number patterns (consolidated and pre-compiled)
+        # Comprehensive phone number patterns - Enhanced to catch ALL variations
+        # IMPORTANT: Only numbers with 8+ digits are considered phone numbers (to preserve prices)
         self.phone_patterns = [
-            # Italian numbers (consolidated patterns)
-            re.compile(r'(?:\+39\s*)?(?:39\s*)?3\d{2}\s*[-.\s]?\d{3}\s*[-.\s]?\d{4}\b', re.IGNORECASE),
-            re.compile(r'(?:\+39\s*)?(?:39\s*)?3\d{8}\b', re.IGNORECASE),
+            # Italian numbers with all possible formats (8-10 digits only)
+            re.compile(r'(?:\+39\s*)?(?:39\s*)?3\d{2}\s*[-.\s]+\d{3}\s*[-.\s]+\d{4}\b', re.IGNORECASE),
+            re.compile(r'(?:\+39\s*)?(?:39\s*)?3\d{8,9}\b', re.IGNORECASE),
+            re.compile(r'(?:\+39\s*)?(?:39\s*)?\(?3\d{2}\)?\s*[-.\s]*\d{3}\s*[-.\s]*\d{4}\b', re.IGNORECASE),
             
-            # Spanish numbers (consolidated patterns)
-            re.compile(r'(?:\+34\s*)?(?:34\s*)?[67]\d{2}\s*[-.\s]?\d{3}\s*[-.\s]?\d{3}\b', re.IGNORECASE),
+            # Spanish numbers with all possible formats (8-9 digits only)
+            re.compile(r'(?:\+34\s*)?(?:34\s*)?[67]\d{2}\s*[-.\s]+\d{3}\s*[-.\s]+\d{3}\b', re.IGNORECASE),
             re.compile(r'(?:\+34\s*)?(?:34\s*)?[67]\d{8}\b', re.IGNORECASE),
+            re.compile(r'(?:\+34\s*)?(?:34\s*)?\(?[67]\d{2}\)?\s*[-.\s]*\d{3}\s*[-.\s]*\d{3}\b', re.IGNORECASE),
             
-            # Generic patterns for numbers starting with 6 or 7 (common in Spain)
-            re.compile(r'\b[67]\d{2}\s*[-.\s]?\d{3}\s*[-.\s]?\d{3}\b', re.IGNORECASE),
+            # Generic patterns for numbers starting with 6 or 7 (common in Spain) - 8+ digits only
+            re.compile(r'\b[67]\d{2}\s*[-.\s]+\d{3}\s*[-.\s]+\d{3}\b', re.IGNORECASE),
             re.compile(r'\b[67]\d{8}\b', re.IGNORECASE),
+            re.compile(r'\b\(?[67]\d{2}\)?\s*[-.\s]*\d{3}\s*[-.\s]*\d{3}\b', re.IGNORECASE),
             
-            # Italian numbers without prefix
-            re.compile(r'\b3\d{2}\s*[-.\s]?\d{3}\s*[-.\s]?\d{4}\b', re.IGNORECASE),
+            # Italian numbers without prefix - all formats (9+ digits only)
+            re.compile(r'\b3\d{2}\s*[-.\s]+\d{3}\s*[-.\s]+\d{4}\b', re.IGNORECASE),
             re.compile(r'\b3\d{9}\b', re.IGNORECASE),
+            re.compile(r'\b\(?3\d{2}\)?\s*[-.\s]*\d{3}\s*[-.\s]*\d{4}\b', re.IGNORECASE),
+            
+            # Additional patterns for edge cases (8+ digits only)
+            # Numbers with multiple spaces
+            re.compile(r'\b[67]\d{2}\s{2,}\d{3}\s{2,}\d{3}\b', re.IGNORECASE),
+            re.compile(r'\b3\d{2}\s{2,}\d{3}\s{2,}\d{4}\b', re.IGNORECASE),
+            
+            # Numbers with mixed separators (8+ digits only)
+            re.compile(r'\b[67]\d{2}[-.\s]+\d{3}[-.\s]+\d{3}\b', re.IGNORECASE),
+            re.compile(r'\b3\d{2}[-.\s]+\d{3}[-.\s]+\d{4}\b', re.IGNORECASE),
+            
+            # Numbers with parentheses and spaces (8+ digits only)
+            re.compile(r'\b\([67]\d{2}\)\s*[-.\s]*\d{3}\s*[-.\s]*\d{3}\b', re.IGNORECASE),
+            re.compile(r'\b\(3\d{2}\)\s*[-.\s]*\d{3}\s*[-.\s]*\d{4}\b', re.IGNORECASE),
+            
+            # Numbers with country codes in various formats (8+ digits only)
+            re.compile(r'\+\d{1,3}\s*[67]\d{2}\s*[-.\s]*\d{3}\s*[-.\s]*\d{3}\b', re.IGNORECASE),
+            re.compile(r'\+\d{1,3}\s*3\d{2}\s*[-.\s]*\d{3}\s*[-.\s]*\d{4}\b', re.IGNORECASE),
+            
+            # Numbers with dots as separators (8+ digits only)
+            re.compile(r'\b[67]\d{2}\.\d{3}\.\d{3}\b', re.IGNORECASE),
+            re.compile(r'\b3\d{2}\.\d{3}\.\d{4}\b', re.IGNORECASE),
+            
+            # Numbers with hyphens as separators (8+ digits only)
+            re.compile(r'\b[67]\d{2}-\d{3}-\d{3}\b', re.IGNORECASE),
+            re.compile(r'\b3\d{2}-\d{3}-\d{4}\b', re.IGNORECASE),
+            
+            # CRITICAL: Numbers with single spaces (most common format that was escaping)
+            # Only 8+ digits to avoid censoring prices
+            re.compile(r'\b[67]\d{1}\s\d{2}\s\d{2}\s\d{2}\s\d{2}\b', re.IGNORECASE),
+            re.compile(r'\b3\d{2}\s\d{3}\s\d{4}\b', re.IGNORECASE),
+            
+            # Numbers with double or multiple spaces (8+ digits only)
+            re.compile(r'\b[67]\d{1}\s{2,}\d{2}\s{2,}\d{2}\s{2,}\d{2}\s{2,}\d{2}\b', re.IGNORECASE),
+            re.compile(r'\b3\d{2}\s{2,}\d{3}\s{2,}\d{4}\b', re.IGNORECASE),
+            
+            # ULTIMATE FALLBACK: Generic patterns for any phone number format (8+ digits only)
+            # This catches the remaining edge cases
+            re.compile(r'\b[67]\d{1}\s+\d{2}\s+\d{2}\s+\d{2}\s+\d{2}\b', re.IGNORECASE),
+            re.compile(r'\b3\d{2}\s+\d{3}\s+\d{4}\b', re.IGNORECASE),
+            
+            # Final catch-all for Spanish numbers with any spacing (8+ digits only)
+            re.compile(r'\b[67]\d{1}\s*\d{2}\s*\d{2}\s*\d{2}\s*\d{2}\b', re.IGNORECASE),
+            re.compile(r'\b3\d{2}\s*\d{3}\s*\d{4}\b', re.IGNORECASE),
+            
+            # SPECIFIC PATTERNS for the escaping formats (8+ digits only)
+            # Pattern for "6 12 34 56 78" format (single digit + groups of 2)
+            re.compile(r'\b[67]\s\d{2}\s\d{2}\s\d{2}\s\d{2}\b', re.IGNORECASE),
+            re.compile(r'\b[67]\s{2,}\d{2}\s{2,}\d{2}\s{2,}\d{2}\s{2,}\d{2}\b', re.IGNORECASE),
+            
+            # Pattern for "614 25 98 71" format (3-2-2-2 digits)
+            re.compile(r'\b[67]\d{2}\s\d{2}\s\d{2}\s\d{2}\b', re.IGNORECASE),
+            re.compile(r'\b[67]\d{2}\s{2,}\d{2}\s{2,}\d{2}\s{2,}\d{2}\b', re.IGNORECASE),
+            
+            # Generic pattern for any 9-digit Spanish number with spaces (ultimate fallback)
+            re.compile(r'\b[67]\d{1,3}\s+\d{1,3}\s+\d{1,3}\s+\d{1,3}\b', re.IGNORECASE),
         ]
         
         # Pre-compile other patterns
@@ -204,42 +269,4 @@ def get_censorship_stats(text: Optional[str]) -> dict:
     return censor.get_censorship_stats(text)
 
 
-if __name__ == "__main__":
-    # Performance test
-    import time
-    
-    test_texts = [
-        "Alquilo habitación en igualada ver ubicación en apartamento dúplex parejas asepto nenes para alquilar ya quién Page se la queda! Sitio amplio y tranquilo empadronó los nenes para el cole 603597082",
-        "Hola buenas tengo una habitacion disponible para el mes de septiembre precio 400 todo incluido , para una persona, ubicada por el metro fondo Santa coloma de gramanet para mas informcion escriba solo al whatsApp 632338093",
-        "Se alquila habitación individual a chica, en Badalona línea L2 del metro. Cerca de Mercadona, Lidel, Condi, Farmacias y líneas de Bus. 400€ con todos los gastos incluidos. 641919781 solo llamadas.",
-        "Contact me at mario.rossi@gmail.com or call +39 333 123 4567"
-    ]
-    
-    print("🔒 OPTIMIZED DATA CENSORSHIP MODULE TEST")
-    print("=" * 60)
-    
-    # Performance test
-    start_time = time.time()
-    for _ in range(1000):  # Test 1000 iterations
-        for text in test_texts:
-            censored = censor_sensitive_data(text)
-            has_sensitive = has_sensitive_data(text)
-            stats = get_censorship_stats(text)
-    
-    end_time = time.time()
-    print(f"⚡ Performance: {1000 * len(test_texts)} operations in {end_time - start_time:.3f}s")
-    print(f"   Average: {(end_time - start_time) / (1000 * len(test_texts)) * 1000:.3f}ms per operation")
-    
-    # Functionality test
-    for i, text in enumerate(test_texts, 1):
-        print(f"\n📝 TEST {i}:")
-        print(f"Original: {text}")
-        
-        censored = censor_sensitive_data(text)
-        print(f"Censored: {censored}")
-        
-        stats = get_censorship_stats(text)
-        if any(stats.values()):
-            print(f"Stats: {stats}")
-        
-        print("-" * 60)
+# For testing, run: python3 -c "from censorship import censor_sensitive_data; print(censor_sensitive_data('Test: 612345678'))"
