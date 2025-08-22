@@ -104,7 +104,7 @@ function parseIdealistaPage(page) {
     thumbnail: get("thumbnail", "url"),
     status: get("status", "select"),
     newDevelopment: get("new_development", "checkbox"),
-    publicationDate: get("publication_date", "date"),
+    datePublished: get("datePublished", "date"),
     lastSeen: get("last_seen", "date"),
     newGender: get("new_gender", "select"),
     housemates: get("housemates", "rich"),

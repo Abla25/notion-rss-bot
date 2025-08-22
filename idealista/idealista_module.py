@@ -400,11 +400,24 @@ class IdealistaAPI:
         if housemates:
             properties["housemates"] = {"rich_text": [{"text": {"content": housemates}}]}
         
-        # Add publication_date if available
+        # Add publication_date if available - using correct field name and format
         if publication_date:
-            properties["publication_date"] = {
-                "date": {"start": publication_date}
-            }
+            try:
+                # Try to parse and format the date properly
+                if isinstance(publication_date, str):
+                    # If it's already a string, try to parse it
+                    parsed_date = datetime.fromisoformat(publication_date.replace('Z', '+00:00'))
+                    formatted_date = parsed_date.strftime('%Y-%m-%d')
+                else:
+                    # If it's already a datetime object
+                    formatted_date = publication_date.strftime('%Y-%m-%d')
+                
+                properties["datePublished"] = {
+                    "date": {"start": formatted_date}
+                }
+                print(f"📅 Added publication date: {formatted_date} for property {property_code}")
+            except Exception as e:
+                print(f"⚠️ Could not parse publication date '{publication_date}' for property {property_code}: {e}")
         
         return properties
     

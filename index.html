@@ -321,6 +321,18 @@
       box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
     }
 
+    .filter-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: end;
+      margin-bottom: 2rem;
+    }
+
+    .filter-row:last-child {
+      margin-bottom: 0;
+    }
+
     .filter-group {
       display: flex;
       flex-direction: column;
@@ -366,18 +378,212 @@
       transform: translateY(-1px);
     }
 
-    .filter-row {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 2rem;
-      align-items: end;
-      margin-bottom: 2rem;
+    /* Source Dropdown */
+    .source-dropdown {
+      position: relative;
     }
 
-    .filter-row.secondary {
-      border-top: 1px solid #e5e7eb;
-      padding-top: 2rem;
+    .source-toggle {
+      width: 100%;
+      padding: 1rem 1.25rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 16px;
+      background: #ffffff;
+      font-size: 0.9rem;
+      font-family: inherit;
+      font-weight: 500;
+      color: #374151;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .source-toggle:hover {
+      border-color: #d1d5db;
+      background: #f9fafb;
+    }
+
+    .source-toggle:focus {
+      outline: none;
+      border-color: #3B82F6;
+      box-shadow: 
+        0 0 0 3px rgba(59, 130, 246, 0.1),
+        0 4px 12px rgba(59, 130, 246, 0.15);
+    }
+
+    .dropdown-arrow {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .source-dropdown.active .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+
+    .source-content {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-top: 0.5rem;
+    }
+
+    .source-dropdown.active .source-content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .source-option {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      border-bottom: 1px solid #f3f4f6;
+    }
+
+    .source-option:last-child {
+      border-bottom: none;
+    }
+
+    .source-option:hover {
+      background: #f9fafb;
+    }
+
+    .source-option input[type="checkbox"] {
+      display: none;
+    }
+
+    .checkbox-custom {
+      width: 18px;
+      height: 18px;
+      border: 2px solid #d1d5db;
+      border-radius: 4px;
+      margin-right: 0.75rem;
+      position: relative;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .source-option input[type="checkbox"]:checked + .checkbox-custom {
+      background: #3B82F6;
+      border-color: #3B82F6;
+    }
+
+    .source-option input[type="checkbox"]:checked + .checkbox-custom::after {
+      content: '✓';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .checkbox-label {
+      font-size: 0.9rem;
+      color: #374151;
+      font-weight: 500;
+    }
+
+    /* Other Filters Dropdown */
+    .other-filters-dropdown {
+      position: relative;
+    }
+
+    .other-filters-toggle {
+      width: 100%;
+      padding: 1rem 1.25rem;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 16px;
+      background: #ffffff;
+      font-size: 0.9rem;
+      font-family: inherit;
+      font-weight: 500;
+      color: #374151;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .other-filters-toggle:hover {
+      border-color: #d1d5db;
+      background: #f9fafb;
+    }
+
+    .other-filters-toggle:focus {
+      outline: none;
+      border-color: #3B82F6;
+      box-shadow: 
+        0 0 0 3px rgba(59, 130, 246, 0.1),
+        0 4px 12px rgba(59, 130, 246, 0.15);
+    }
+
+    .other-filters-dropdown.active .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+
+    .other-filters-content {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      margin-top: 0.5rem;
+      padding: 1rem;
+    }
+
+    .other-filters-dropdown.active .other-filters-content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .other-filters-content .filter-group {
+      margin-bottom: 1rem;
+    }
+
+    .other-filters-content .filter-group:last-child {
       margin-bottom: 0;
+    }
+
+    .other-filters-content label {
+      font-size: 0.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .filter-badge {
+      background: #fef3c7;
+      color: #92400e;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-left: 0.5rem;
     }
 
     /* Active Filters */
@@ -1818,19 +2024,8 @@
 
 
     <div class="filters">
+      <!-- First row: Source, Zone, Reliability -->
       <div class="filter-row">
-        <div class="filter-group">
-          <label>
-            <svg class="icon" viewBox="0 0 24 24">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-            Zone
-          </label>
-          <select id="filter-zone">
-            <option value="">All zones</option>
-          </select>
-        </div>
         <div class="filter-group source-dropdown">
           <label>
             <svg class="icon" viewBox="0 0 24 24">
@@ -1866,6 +2061,19 @@
         <div class="filter-group">
           <label>
             <svg class="icon" viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            Zone
+          </label>
+          <select id="filter-zone">
+            <option value="">All zones</option>
+          </select>
+        </div>
+
+        <div class="filter-group">
+          <label>
+            <svg class="icon" viewBox="0 0 24 24">
               <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
             </svg>
             Min. Reliability
@@ -1879,6 +2087,10 @@
             <option value="5">≥ 5</option>
           </select>
         </div>
+      </div>
+
+      <!-- Second row: Price, Date, Other Filters -->
+      <div class="filter-row">
         <div class="filter-group">
           <label>
             <svg class="icon" viewBox="0 0 24 24">
@@ -1888,6 +2100,7 @@
           </label>
           <input type="number" id="filter-price" placeholder="e.g. 1200">
         </div>
+
         <div class="filter-group">
           <label>
             <svg class="icon" viewBox="0 0 24 24">
@@ -1906,6 +2119,7 @@
             <option value="30">Last month</option>
           </select>
         </div>
+
         <div class="filter-group other-filters-dropdown">
           <label>
             <svg class="icon" viewBox="0 0 24 24">
@@ -2055,6 +2269,20 @@
         document.getElementById('filter-bathrooms')?.addEventListener('change', applyFilters);
         document.getElementById('filter-gender')?.addEventListener('change', applyFilters);
         
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (e) => {
+          const sourceDropdown = document.querySelector('.source-dropdown');
+          const otherFiltersDropdown = document.querySelector('.other-filters-dropdown');
+          
+          if (sourceDropdown && !sourceDropdown.contains(e.target)) {
+            sourceDropdown.classList.remove('active');
+          }
+          
+          if (otherFiltersDropdown && !otherFiltersDropdown.contains(e.target)) {
+            otherFiltersDropdown.classList.remove('active');
+          }
+        });
+        
         console.log("✅ Event listeners configured");
       } catch (error) {
         console.error("❌ Error configuring event listeners:", error);
@@ -2128,7 +2356,6 @@
         populateFilters();
         applyFilters();
         updateStats();
-        updateMixStats();
         
       } catch (error) {
         console.error("=== LOADING ERROR ===", error);
@@ -2145,74 +2372,7 @@
       }
     }
 
-    // Mix control functions
-    function handleMixModeChange(event) {
-      mixMode = event.target.value;
-      
-      // Update UI
-      document.querySelectorAll('.mix-option').forEach(option => {
-        option.classList.remove('active');
-      });
-      event.target.closest('.mix-option').classList.add('active');
-      
-      // Show/hide slider
-      const sliderContainer = document.getElementById('mix-slider-container');
-      if (mixMode === 'custom') {
-        sliderContainer.classList.add('show');
-      } else {
-        sliderContainer.classList.remove('show');
-      }
-      
-      // Apply mix
-      applyMixAndCombine();
-      applyFilters();
-      updateMixStats();
-    }
-    
-    function handleMixSliderChange(event) {
-      facebookPercentage = parseInt(event.target.value);
-      const idealistaPercentage = 100 - facebookPercentage;
-      
-      // Update percentage display
-      document.getElementById('mix-percentage').textContent = 
-        `${facebookPercentage}% Facebook • ${idealistaPercentage}% Idealista`;
-      
-      // Apply mix
-      applyMixAndCombine();
-      applyFilters();
-      updateMixStats();
-    }
-    
-    function applyMixAndCombine() {
-      let selectedFacebook = [...facebookListings];
-      let selectedIdealista = [...idealistaListings];
-      
-      switch (mixMode) {
-        case 'facebook':
-          selectedIdealista = [];
-          break;
-        case 'idealista':
-          selectedFacebook = [];
-          break;
-        case 'balanced':
-          // Default 70/30 split
-          const facebookCountBalanced = Math.floor(selectedFacebook.length * 0.7);
-          const idealistaCountBalanced = Math.floor(selectedIdealista.length * 0.3);
-          selectedFacebook = selectedFacebook.slice(0, facebookCountBalanced);
-          selectedIdealista = selectedIdealista.slice(0, idealistaCountBalanced);
-          break;
-        case 'custom':
-          const facebookCountCustom = Math.floor(selectedFacebook.length * (facebookPercentage / 100));
-          const idealistaCountCustom = Math.floor(selectedIdealista.length * ((100 - facebookPercentage) / 100));
-          selectedFacebook = selectedFacebook.slice(0, facebookCountCustom);
-          selectedIdealista = selectedIdealista.slice(0, idealistaCountCustom);
-          break;
-      }
-      
-      // Combine and shuffle
-      allListings = shuffleArray([...selectedFacebook, ...selectedIdealista]);
-      console.log(`📊 Mix applied: ${selectedFacebook.length} Facebook + ${selectedIdealista.length} Idealista = ${allListings.length} total`);
-    }
+    // Mix control functions - REMOVED (obsolete)
     
     function shuffleArray(array) {
       const shuffled = [...array];
@@ -2273,24 +2433,12 @@
       }
     }
     
-    function handleSourceChange(event) {
+    function handleSourceChange() {
       const sources = getSelectedSources();
-      
-      // Se Suggested Mix è selezionato, deseleziona gli altri
-      if (event.target.name === 'source-mix' && event.target.checked) {
-        document.querySelector('input[name="source-facebook"]').checked = false;
-        document.querySelector('input[name="source-idealista"]').checked = false;
-      }
-      
-      // Se Facebook o Idealista sono selezionati, deseleziona Suggested Mix
-      if ((event.target.name === 'source-facebook' || event.target.name === 'source-idealista') && event.target.checked) {
-        document.querySelector('input[name="source-mix"]').checked = false;
-      }
       
       // Aggiorna il display
       updateSourceDisplay();
       
-      // Determina la modalità corrente
       if (sources.includes('mix')) {
         currentSource = 'mix';
       } else if (sources.includes('facebook') && sources.includes('idealista')) {
@@ -2413,8 +2561,7 @@
       const minBathrooms = document.getElementById('filter-bathrooms')?.value;
       const minGender = document.getElementById('filter-gender')?.value;
       
-            return zone || source !== 'mix' || minReliability || maxPrice || dateFilter || minRooms || minBathrooms || minGender;
-    }
+      return zone || source !== 'mix' || minReliability || maxPrice || dateFilter || minRooms || minBathrooms || minGender;
     }
 
     function updateActiveFilters() {
@@ -2427,21 +2574,22 @@
       if (zone) filters.push({ type: 'Zone', value: zone, id: 'zone' });
       
       const sources = getSelectedSources();
-      const source = sources.includes('mix') ? 'mix' : sources.join(',');
-      if (source !== 'mix') {
-        const sourceText = sources.includes('facebook') && sources.includes('idealista') ? 'Facebook + Idealista' : 
-                          sources.includes('facebook') ? 'Facebook Only' : 'Idealista Only';
+      const sourceText = sources.includes('mix') ? 'Suggested Mix' : 
+                        sources.includes('facebook') && sources.includes('idealista') ? 'Suggested Mix' :
+                        sources.includes('facebook') ? 'Facebook' :
+                        sources.includes('idealista') ? 'Idealista' : 'Suggested Mix';
+      if (sourceText !== 'Suggested Mix') {
         filters.push({ type: 'Source', value: sourceText, id: 'source' });
       }
       
       // Idealista-specific filters
       const minRooms = document.getElementById('filter-rooms')?.value;
       const minBathrooms = document.getElementById('filter-bathrooms')?.value;
-      const minSize = document.getElementById('filter-size')?.value;
+      const minGender = document.getElementById('filter-gender')?.value;
       
       if (minRooms) filters.push({ type: 'Min Rooms', value: `${minRooms}+`, id: 'rooms' });
       if (minBathrooms) filters.push({ type: 'Min Bathrooms', value: `${minBathrooms}+`, id: 'bathrooms' });
-      if (minSize) filters.push({ type: 'Min Size', value: `${minSize}m²+`, id: 'size' });
+      if (minGender) filters.push({ type: 'Gender', value: minGender, id: 'gender' });
       
       const minReliability = document.getElementById('filter-reliability').value;
       if (minReliability) filters.push({ type: 'Min. Reliability', value: `≥ ${minReliability}`, id: 'reliability' });
@@ -2451,21 +2599,21 @@
       
       const dateFilter = document.getElementById('filter-date').value;
       if (dateFilter) {
-        let dateText = '';
-        switch (dateFilter) {
-          case '1': dateText = 'Today'; break;
-          case '3': dateText = 'Last 3 days'; break;
-          case '7': dateText = 'Last week'; break;
-          case '30': dateText = 'Last month'; break;
-        }
+        const dateText = dateFilter === '1' ? 'Today' :
+                        dateFilter === '3' ? 'Last 3 days' :
+                        dateFilter === '7' ? 'Last week' :
+                        dateFilter === '30' ? 'Last month' : dateFilter;
         filters.push({ type: 'Date', value: dateText, id: 'date' });
       }
       
       if (filters.length > 0) {
         filterTagsDiv.innerHTML = filters.map(filter => `
-          <span class="filter-tag">
+          <span class="filter-tag" onclick="removeFilter('${filter.id}')">
             ${filter.type}: ${filter.value}
-            <button class="remove-filter" onclick="removeFilter('${filter.id}')" title="Remove filter">×</button>
+            <svg class="icon" viewBox="0 0 24 24" style="width: 14px; height: 14px;">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
           </span>
         `).join('');
         activeFiltersDiv.classList.add('show');
@@ -2480,6 +2628,7 @@
           document.getElementById('filter-zone').value = '';
           break;
         case 'source':
+          // Reset to Suggested Mix
           document.querySelector('input[name="source-mix"]').checked = true;
           document.querySelector('input[name="source-facebook"]').checked = false;
           document.querySelector('input[name="source-idealista"]').checked = false;
@@ -2491,8 +2640,8 @@
         case 'bathrooms':
           document.getElementById('filter-bathrooms').value = '';
           break;
-        case 'size':
-          document.getElementById('filter-size').value = '';
+        case 'gender':
+          document.getElementById('filter-gender').value = '';
           break;
         case 'reliability':
           document.getElementById('filter-reliability').value = '';
@@ -2509,124 +2658,118 @@
 
     function clearAllFilters() {
       document.getElementById('filter-zone').value = '';
+      document.getElementById('filter-reliability').value = '';
+      document.getElementById('filter-price').value = '';
+      document.getElementById('filter-date').value = '';
+      document.getElementById('filter-rooms').value = '';
+      document.getElementById('filter-bathrooms').value = '';
+      document.getElementById('filter-gender').value = '';
+      
+      // Reset source to Suggested Mix
       document.querySelector('input[name="source-mix"]').checked = true;
       document.querySelector('input[name="source-facebook"]').checked = false;
       document.querySelector('input[name="source-idealista"]').checked = false;
       updateSourceDisplay();
-      document.getElementById('filter-rooms').value = '';
-      document.getElementById('filter-bathrooms').value = '';
-      document.getElementById('filter-gender').value = '';
-      document.getElementById('filter-reliability').value = '';
-      document.getElementById('filter-price').value = '';
-      document.getElementById('filter-date').value = '';
+      
       applyFilters();
     }
 
     function populateFilters() {
       // Filter only active posts to populate filters
       const activeListings = allListings.filter(l => l.status !== "expired" && l.status !== "verification_needed");
-      const zones = [...new Set(activeListings.map(l => l.zoneMacro || null).filter(Boolean))].sort();
-
-      console.log("Available zones:", zones);
-
+      
+      // Populate zones from both Facebook and Idealista
+      const zones = new Set();
+      activeListings.forEach(l => {
+        if (l.zoneMacro) zones.add(l.zoneMacro);
+        if (l.district) zones.add(l.district);
+      });
+      
       const zoneSelect = document.getElementById('filter-zone');
+      const currentZone = zoneSelect.value;
       zoneSelect.innerHTML = '<option value="">All zones</option>';
-      zones.forEach(z => zoneSelect.add(new Option(z, z)));
+      Array.from(zones).sort().forEach(zone => {
+        const option = document.createElement('option');
+        option.value = zone;
+        option.textContent = zone;
+        if (zone === currentZone) option.selected = true;
+        zoneSelect.appendChild(option);
+      });
     }
 
     function applyFilters() {
       const zone = document.getElementById('filter-zone').value;
-      const source = document.getElementById('filter-source').value;
+      const sources = getSelectedSources();
+      const source = sources.includes('mix') ? 'mix' : sources.join(',');
       const minReliability = parseInt(document.getElementById('filter-reliability').value) || 0;
-      const maxPrice = parseInt(document.getElementById('filter-price').value) || Infinity;
-      const dateFilter = document.getElementById('filter-date').value;
+      const maxPrice = parseInt(document.getElementById('filter-price').value) || 0;
+      const dateFilter = parseInt(document.getElementById('filter-date').value) || 0;
       
       // Idealista-specific filters
       const minRooms = parseInt(document.getElementById('filter-rooms')?.value) || 0;
       const minBathrooms = parseInt(document.getElementById('filter-bathrooms')?.value) || 0;
-      const minSize = parseInt(document.getElementById('filter-size')?.value) || 0;
-
+      const minGender = document.getElementById('filter-gender')?.value;
+      
       console.log("=== APPLYING FILTERS ===");
-      console.log("Active filters:", { zone, source, minReliability, maxPrice, dateFilter, minRooms, minBathrooms, minSize });
-
+      console.log("Active filters:", { zone, source, minReliability, maxPrice, dateFilter, minRooms, minBathrooms, minGender });
+      
       // Show/hide Idealista-specific filters based on source selection
       const idealistaFilters = document.querySelectorAll('.filter-group.idealista-only');
       idealistaFilters.forEach(filter => {
-        if (source === 'Idealista' || !source) {
-          filter.classList.add('show');
+        if (currentSource === 'facebook') {
+          filter.style.display = 'none';
         } else {
-          filter.classList.remove('show');
+          filter.style.display = 'block';
         }
       });
-
+      
+      // Show/hide reliability filter based on source
+      const reliabilityFilter = document.getElementById('filter-reliability').closest('.filter-group');
+      if (currentSource === 'idealista') {
+        reliabilityFilter.style.display = 'none';
+      } else {
+        reliabilityFilter.style.display = 'block';
+      }
+      
       filteredListings = allListings.filter(l => {
-        // Exclude posts with status "expired"
-        if (l.status === "expired" || l.status === "verification_needed") {
-          return false;
+        // Zone filter (check both zoneMacro for Facebook and district for Idealista)
+        const zoneMatch = !zone || l.zoneMacro === zone || l.district === zone;
+        
+        // Source filter
+        const sourceMatch = source === 'mix' || l.source === source;
+        
+        // Reliability filter (Idealista listings always pass)
+        const reliabilityMatch = l.source === 'Idealista' ? true : (l.reliability || 0) >= minReliability;
+        
+        // Price filter
+        const priceMatch = !maxPrice || (l.price && l.price <= maxPrice);
+        
+        // Date filter
+        let dateMatch = true;
+        if (dateFilter > 0 && l.datePublished) {
+          const listingDate = new Date(l.datePublished);
+          const cutoffDate = new Date();
+          cutoffDate.setDate(cutoffDate.getDate() - dateFilter);
+          dateMatch = listingDate >= cutoffDate;
         }
         
-        const zoneMatch = !zone || l.zoneMacro === zone;
-        const sourceMatch = !source || l.source === source;
-        const reliabilityMatch = (l.reliability || 0) >= minReliability;
-        const priceMatch = (parseInt(l.price) || 0) <= maxPrice;
-        
-        // Idealista-specific filters
-        const roomsMatch = !minRooms || (l.rooms && l.rooms >= minRooms);
-        const bathroomsMatch = !minBathrooms || (l.bathrooms && l.bathrooms >= minBathrooms);
-        const sizeMatch = !minSize || (l.size && l.size >= minSize);
-        
-        // Date filter - use dateAdded if available, otherwise datePublished
-        let dateMatch = true;
-        if (dateFilter) {
-          const postDate = l.dateAdded || l.datePublished;
-          if (postDate) {
-            const postDateObj = new Date(postDate);
-            const now = new Date();
-            
-            // Normalize dates to compare only the date (without time)
-            const postDateOnly = new Date(postDateObj.getFullYear(), postDateObj.getMonth(), postDateObj.getDate());
-            const nowDateOnly = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-            
-            switch (dateFilter) {
-              case '1': // Today
-                dateMatch = postDateOnly.getTime() === nowDateOnly.getTime();
-                break;
-              case '3': // Last 3 days
-                const threeDaysAgo = new Date(nowDateOnly);
-                threeDaysAgo.setDate(nowDateOnly.getDate() - 2); // -2 because we include today
-                dateMatch = postDateOnly >= threeDaysAgo && postDateOnly <= nowDateOnly;
-                break;
-              case '7': // Last week
-                const sevenDaysAgo = new Date(nowDateOnly);
-                sevenDaysAgo.setDate(nowDateOnly.getDate() - 6); // -6 because we include today
-                dateMatch = postDateOnly >= sevenDaysAgo && postDateOnly <= nowDateOnly;
-                break;
-              case '30': // Last month
-                const thirtyDaysAgo = new Date(nowDateOnly);
-                thirtyDaysAgo.setDate(nowDateOnly.getDate() - 29); // -29 because we include today
-                dateMatch = postDateOnly >= thirtyDaysAgo && postDateOnly <= nowDateOnly;
-                break;
-            }
-          } else {
-            // If there's no date, don't show for temporal filters
-            dateMatch = false;
-          }
+        // If there's no date, don't show for temporal filters
+        if (dateFilter > 0 && !l.datePublished) {
+          dateMatch = false;
         }
         
         // Apply Idealista-specific filters only if source is Idealista or mix
-        const idealistaFiltersMatch = (currentSource === 'idealista' || currentSource === 'mix') ? 
-          (roomsMatch && bathroomsMatch && genderMatch) : true;
+        const idealistaFiltersMatch = (currentSource === 'idealista' || currentSource === 'mix') ?
+          (!minRooms || (l.rooms && l.rooms >= minRooms)) &&
+          (!minBathrooms || (l.bathrooms && l.bathrooms >= minBathrooms)) &&
+          (!minGender || (l.newGender && l.newGender === minGender)) : true;
         
         return zoneMatch && sourceMatch && reliabilityMatch && priceMatch && dateMatch && idealistaFiltersMatch;
       });
-
-      console.log(`Filtered listings: ${filteredListings.length} out of ${allListings.length}`);
+      
       currentPage = 1; // Reset to first page when applying filters
-      applySorting();
-      renderListings();
-      updatePagination();
+      displayListings();
       updateActiveFilters();
-      updateStats();
     }
 
     function applySorting() {
