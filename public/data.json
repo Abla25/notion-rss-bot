@@ -1,8 +1,59 @@
 {
-  "generatedAt": "2025-08-23T14:52:57.455Z",
-  "count": 215,
-  "totalRejectedCount": 377,
+  "generatedAt": "2025-08-23T15:41:45.560Z",
+  "count": 218,
+  "totalRejectedCount": 384,
   "results": [
+    {
+      "id": "258b5f64-9329-81d5-bc1f-cd0d3db0dce4",
+      "title": "Individual Room for Rent in Barcelona",
+      "overview": "A individual room for rent in a shared apartment in Plaza Virrei Amat, Barcelona. The room is exterior with a balcony and includes a bed, nightstand, and wardrobe. Services are included in the price.",
+      "description": "Alquilamos habitación INDIVIDUAL PARA CHICO ordenado con trabajo estable, sociable y respetuoso.NO FUMADOR. Habitación exterior a balcón. Cuenta con armario mesita noche y cama equipada. Precio 450 Euros Servicios incluidos. ZONA PLAZA VIRREI AMAT (BARCELONA). Metro L5. Cerca se dispone de Supermercados,centro de salud, tiendas, centro comercial, bancos y gimnasios . No se admiten visitas, parejas ni mascotas. No atiendo por Messenger gracias. Teléfono / Wasshap de contacto [PHONE NUMBER CENSORED] David.",
+      "price": "450 Euros",
+      "zone": "Plaza Virrei Amat, Barcelona",
+      "zoneMacro": "Gràcia",
+      "rooms": "",
+      "reliability": 4,
+      "reliabilityReason": "The post includes a clear description of the room, the price, and the location. It also includes a phone number and a WhatsApp contact, which adds to the reliability. However, the lack of detailed information about the landlord and the apartment building prevents it from being a 5.",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T15:41:00.000+00:00",
+      "link": "https://www.facebook.com/groups/365556558673981/posts/1070259448203685/",
+      "status": "active",
+      "imageUrl": "https://scontent.fpnq7-5.fna.fbcdn.net/v/t39.30808-6/538049521_10234135431260154_3034307734860691553_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=hhagKB6BjVkQ7kNvwFhD5Zh&_nc_oc=AdlX40HZGP_VgeJBMX-gUTE8dz0ZRayDJnJe7nV1GTF_hSsx8Uibjdz8bvvN9hqkzPiez1IFALm_WG7uWNh_8oSU&_nc_zt=23&_nc_ht=scontent.fpnq7-5.fna&_nc_gid=MMw5tAqep7EbrwDMaXckgg&oh=00_AfUgBjqAvTLqp9LSnPg2ggywG8gRxJULU12a3o74rIPdUg&oe=68AFA079"
+    },
+    {
+      "id": "258b5f64-9329-81ad-bd62-cab9adcbf322",
+      "title": "Large Room for Rent in Barcelona",
+      "overview": "A large room is available for rent in Barcelona, including a large bed, sofa, and closet. The room is suitable for a single working woman or senior, seeking a quiet and clean environment.",
+      "description": "me queda una habitacion grande libre en barcelona \"\"FONDO \"\" 400 gastos incluidos, cama grande canape 1armarios ets para el 1 de septiembre para una parsona trabajadora que busque tranquilidad y sea limpia, habitacion solo para chica o siniora, mas informacion [MESSAGING CONTACT CENSORED]",
+      "price": "400",
+      "zone": "Barcelona",
+      "zoneMacro": "Santa Coloma de Gramenet",
+      "rooms": "1",
+      "reliability": 2,
+      "reliabilityReason": "The listing lacks photos and does not provide extensive information about the accommodation, which raises some concerns about its legitimacy.",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T15:39:00.000+00:00",
+      "link": "https://www.facebook.com/groups/365556558673981/posts/1070300318199598/",
+      "status": "active",
+      "imageUrl": ""
+    },
+    {
+      "id": "258b5f64-9329-81b1-bd5e-c1affca26b45",
+      "title": "Room for Rent in Hospitalet de Llobregat",
+      "overview": "A room for rent in a shared accommodation in Hospitalet de Llobregat, available from August 31st, with a deposit of 100 euros, suitable for adults only, no pets allowed due to allergies",
+      "description": "Hola es para Alquilo hab pars chico Ingreso 31 de agosto Lugar hospitalet torrasa Fianza 100 Solo adultos no mascotas soy alérgica",
+      "price": "N/A",
+      "zone": "Hospitalet de Llobregat",
+      "zoneMacro": "L'Hospitalet de Llobregat",
+      "rooms": "N/A",
+      "reliability": 4,
+      "reliabilityReason": "The post contains sufficient information about the rental, including location, availability, and deposit, and includes a photo. However, the price is not specified, which prevents it from achieving the highest reliability score.",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T15:33:00.000+00:00",
+      "link": "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1071548658483999/",
+      "status": "active",
+      "imageUrl": "https://scontent.fixc16-1.fna.fbcdn.net/v/t39.30808-6/537398533_24552296107698029_1341894122925405217_n.jpg?stp=cp6_dst-jpg_p526x296_tt6&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=sFoY_dBmehsQ7kNvwG8M7Ax&_nc_oc=AdnysbnOZ49fvTuxGGp1FtksadRKxi9OPcL7OPzSWbaJKjUkcp-YvIRAZR7q6R1NIEo&_nc_zt=23&_nc_ht=scontent.fixc16-1.fna&_nc_gid=K5mdTFk2XCN1koCe2o_5Ig&oh=00_AfXqzCLGU3XY5kHXT-WWuh20-aeTW8gByEPdLmNme9S3Eg&oe=68AF9793"
+    },
     {
       "id": "258b5f64-9329-81f1-a59a-cb80071990e8",
       "title": "Bright Room for Rent in Paseo Vall Hebron",
@@ -340,7 +391,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-23T09:27:00.000+00:00",
       "link": "https://www.facebook.com/groups/365556558673981/posts/1070100248219605/",
-      "status": "active",
+      "status": "verification_needed",
       "imageUrl": ""
     },
     {
@@ -408,7 +459,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-23T09:23:00.000+00:00",
       "link": "https://www.facebook.com/groups/2723040451261813/posts/4298981623667680/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": "https://scontent-cdg4-2.xx.fbcdn.net/v/t39.30808-6/537636138_122172500144517722_5846310633375194335_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=109&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=cJIcCqYy4LsQ7kNvwGs5q86&_nc_oc=AdmEK2UcCQJtsufMVC3-1vt-Ukkv9TrtGrsyGsCD-Fn6LCAxKLqc3RItcu5sABk8wy0&_nc_zt=23&_nc_ht=scontent-cdg4-2.xx&_nc_gid=RopOC9oeZqmTnxvJbtwv4g&oh=00_AfWoCAIhiVMP0SrW4E2SHUQcuYKTcBfvoJhYdzJb7GlDFA&oe=68AF4F9C"
     },
     {
@@ -1003,7 +1054,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-22T21:25:00.000+00:00",
       "link": "https://www.facebook.com/groups/986691378511610/posts/2178419502672119/",
-      "status": "active",
+      "status": "verification_needed",
       "imageUrl": "https://scontent.fbom23-1.fna.fbcdn.net/v/t39.30808-6/537964146_10162257387996622_8797466497526873000_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=100&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=AnXHXU8gME4Q7kNvwFel7yJ&_nc_oc=Adn-5yB28GHC9RJHel97vWtS4n71KW2MuLVFEzfvjjhxC61GCpdYCMJNRJ5IrzO42rg&_nc_zt=23&_nc_ht=scontent.fbom23-1.fna&_nc_gid=rZ1tdOGPDWeJ6bZU5oZG3w&oh=00_AfVp5LUV1_UH3aAW4KqFyn9HrXefAHPdNiquTmQDMMrayA&oe=68AE84FE"
     },
     {
@@ -1360,7 +1411,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-22T14:28:00.000+00:00",
       "link": "https://www.facebook.com/groups/365556558673981/posts/1069497484946548/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": "https://scontent.fccu35-1.fna.fbcdn.net/v/t39.30808-6/538364649_10234123302756949_9120176874303827006_n.jpg?stp=dst-jpg_p526x296_tt6&_nc_cat=108&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=HWF3GSJDLS8Q7kNvwGd73VZ&_nc_oc=AdnSYOEGd4a4vmYYHSFszzEwT7GUA6reOnSUgtYPbWt9ppt2tNdN3R-nkLY8TnuWKmgGBbx73_3SBkOrCUo13mwB&_nc_zt=23&_nc_ht=scontent.fccu35-1.fna&_nc_gid=CWaPezHTn8GgjtTLTRuTcg&oh=00_AfXaOXf1xgRCaSd7C6Ll2hrgAqxuX0B-spF3l-qkJPfIpg&oe=68AE345A"
     },
     {
@@ -1513,7 +1564,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-22T11:24:00.000+00:00",
       "link": "https://www.facebook.com/groups/986691378511610/posts/2178144382699631/",
-      "status": "active",
+      "status": "verification_needed",
       "imageUrl": ""
     },
     {
@@ -1819,7 +1870,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-22T06:37:00.000+00:00",
       "link": "https://www.facebook.com/groups/365556558673981/posts/1069271388302491/",
-      "status": "active",
+      "status": "verification_needed",
       "imageUrl": ""
     },
     {
@@ -2244,7 +2295,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-21T23:12:00.000+00:00",
       "link": "https://www.facebook.com/groups/986691378511610/posts/2177533129427423/",
-      "status": "active",
+      "status": "verification_needed",
       "imageUrl": ""
     },
     {
