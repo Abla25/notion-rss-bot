@@ -1,8 +1,59 @@
 {
-  "generatedAt": "2025-08-23T09:27:58.169Z",
-  "count": 196,
-  "totalRejectedCount": 346,
+  "generatedAt": "2025-08-23T10:25:57.818Z",
+  "count": 199,
+  "totalRejectedCount": 350,
   "results": [
+    {
+      "id": "258b5f64-9329-81d9-9aa9-de52b4f20300",
+      "title": "Room for rent near metro L5",
+      "overview": "A room is available for rent for a single working person, 2 minutes from metro L5, non-smokers only",
+      "description": "Se alquila habitación a 2 minutos del metro L5 Pubilla casas Buses M14 L16 LH2 Para persona sola trabajadora no fumadores Información al privado",
+      "price": "N/A",
+      "zone": "Near metro L5",
+      "zoneMacro": "Horta Guinardó",
+      "rooms": "1",
+      "reliability": 4,
+      "reliabilityReason": "The post includes a photo and seems legitimate, but the price is not specified",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T10:25:00.000+00:00",
+      "link": "https://www.facebook.com/groups/986691378511610/posts/2178869962627073/",
+      "status": "active",
+      "imageUrl": "https://scontent.fstv9-1.fna.fbcdn.net/v/t39.30808-6/538015755_24616485774611788_1880044354148382546_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=104&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=EEJwkbkKr40Q7kNvwGXY3Di&_nc_oc=AdkS2_lb4jBMHCE5h6--5fwCAeHEcjXHNeS6n2MeHkb9mhtxNQI7B9OOPBw3yrhhxQI&_nc_zt=23&_nc_ht=scontent.fstv9-1.fna&_nc_gid=E-pw5xeMb5x9Gk4tzHugPQ&oh=00_AfVYpwlq8_PRczKZi0RsdKuQVHfmmKMsH8EnI4loJhbdMQ&oe=68AF5F73"
+    },
+    {
+      "id": "258b5f64-9329-8162-be0d-ef7b1f0eecdd",
+      "title": "Double room for rent for females",
+      "overview": "Double room available for 1 or 2 females with external window, available on August 31st",
+      "description": "Se Alquila Habitación Doble para 1 o 2 Chicas con Ventana Exterior. Disponible 31 Agosto. Informes Whatsapp 📲[PHONE NUMBER CENSORED]",
+      "price": "N/A",
+      "zone": "N/A",
+      "zoneMacro": "",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "Lacks photos, price information, and detailed description, but has contact information",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T10:24:00.000+00:00",
+      "link": "https://www.facebook.com/groups/986691378511610/posts/2178954719285264/",
+      "status": "active",
+      "imageUrl": ""
+    },
+    {
+      "id": "258b5f64-9329-81ab-a6f1-ccebd910014b",
+      "title": "Room for rent in Badalona",
+      "overview": "Room rental available for a single woman in the LaSalut/Llefià area of Badalona",
+      "description": "Se alquila habitación a mujer o chica sola zona BADALONA AL DIA (LaSalut/Llefià)",
+      "price": "N/A",
+      "zone": "Badalona",
+      "zoneMacro": "Badalona",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "The post lacks photos and does not provide a clear price or detailed description of the room, which lowers its reliability score.",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T10:23:00.000+00:00",
+      "link": "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1071314065174125/",
+      "status": "active",
+      "imageUrl": ""
+    },
     {
       "id": "258b5f64-9329-81cb-8a29-f24d3b201120",
       "title": "Room for Rent near Rambla Badal",
@@ -34,7 +85,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-23T09:27:00.000+00:00",
       "link": "https://www.facebook.com/groups/365556558673981/posts/1070106311552332/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": ""
     },
     {
@@ -2839,7 +2890,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-20T16:30:00.000+00:00",
       "link": "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1069216512050547/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": ""
     },
     {
