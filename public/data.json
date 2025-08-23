@@ -1,8 +1,25 @@
 {
-  "generatedAt": "2025-08-23T01:59:18.119Z",
-  "count": 178,
-  "totalRejectedCount": 320,
+  "generatedAt": "2025-08-23T03:07:07.925Z",
+  "count": 179,
+  "totalRejectedCount": 321,
   "results": [
+    {
+      "id": "258b5f64-9329-814e-be17-ffcd9cfbf956",
+      "title": "Room for rent in Barcelona",
+      "overview": "Room available for a single person or couple in Hospitalet de Llobregat, Barcelona, starting September 1st",
+      "description": "Habitación disponible a partir del 1ero de septiembre,📍Barcelona Hospitalet de llobregat ,para persona sola o pareja!",
+      "price": "N/A",
+      "zone": "Hospitalet de Llobregat, Barcelona",
+      "zoneMacro": "L'Hospitalet de Llobregat",
+      "rooms": "N/A",
+      "reliability": 2,
+      "reliabilityReason": "The post lacks photos, price information, and contact details, which reduces its reliability",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T03:06:00.000+00:00",
+      "link": "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1070984621873736/",
+      "status": "active",
+      "imageUrl": ""
+    },
     {
       "id": "258b5f64-9329-81f3-a6a2-cd8daee205fb",
       "title": "Double Room for Rent for 1 or 2 Girls",
