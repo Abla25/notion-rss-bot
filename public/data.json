@@ -1,8 +1,25 @@
 {
-  "generatedAt": "2025-08-23T21:39:01.057Z",
-  "count": 234,
-  "totalRejectedCount": 420,
+  "generatedAt": "2025-08-23T22:58:03.751Z",
+  "count": 235,
+  "totalRejectedCount": 439,
   "results": [
+    {
+      "id": "258b5f64-9329-8172-aed4-d2ffa5395428",
+      "title": "Room for Rent for Couple",
+      "overview": "Room rental for a couple without children, preferably Latin, starting September 1st in Hospitalet",
+      "description": "Se alquila habitación para pareja sin niños, de preferencia latinos el 1 de setiembre hospitalet",
+      "price": "N/A",
+      "zone": "Hospitalet",
+      "zoneMacro": "L'Hospitalet de Llobregat",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "The post lacks photos, and the information provided is minimal, but it seems to be a genuine room rental offer.",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T22:27:00.000+00:00",
+      "link": "https://www.facebook.com/groups/2723040451261813/posts/4299614703604372/",
+      "status": "active",
+      "imageUrl": ""
+    },
     {
       "id": "258b5f64-9329-81a4-b00a-dc33ac25b16d",
       "title": "Room for rent in Santa Eulalia for female",
@@ -34,7 +51,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-23T21:33:00.000+00:00",
       "link": "https://www.facebook.com/groups/986691378511610/posts/2179414669239269/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": ""
     },
     {
