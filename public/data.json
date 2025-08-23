@@ -1,8 +1,42 @@
 {
-  "generatedAt": "2025-08-23T13:09:58.026Z",
-  "count": 208,
-  "totalRejectedCount": 363,
+  "generatedAt": "2025-08-23T13:41:14.378Z",
+  "count": 210,
+  "totalRejectedCount": 371,
   "results": [
+    {
+      "id": "258b5f64-9329-812b-971b-fdcde5c4c16e",
+      "title": "Room for Rent in Barcelona Apartment",
+      "overview": "Private room with own bathroom in a shared apartment, featuring a swimming pool and allowing animals, suitable for long-term stay",
+      "description": "✨ Room Available from September ✨ Looking for a flatmate to share a beautiful apartment in Barcelona! • Spacious private room with your own bathroom • Swimming pool to enjoy the sunny days 🌞 • Animal-friendly 🐾 • Perfect for a long-term stay 🏡",
+      "price": "N/A",
+      "zone": "Barcelona",
+      "zoneMacro": "",
+      "rooms": "N/A",
+      "reliability": 4,
+      "reliabilityReason": "The listing provides a clear description of the room and amenities, includes a photo, and specifies the location, but lacks price information and direct contact details.",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T13:40:00.000+00:00",
+      "link": "https://www.facebook.com/groups/986691378511610/posts/2179031762610893/",
+      "status": "active",
+      "imageUrl": "https://scontent-cdg4-3.xx.fbcdn.net/v/t39.30808-6/538822275_1596057901363223_5275237729676121964_n.jpg?stp=dst-jpg_s600x600_tt6&_nc_cat=106&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=eenAYhxZifMQ7kNvwHP_H2b&_nc_oc=AdlL1K3haA9QhOS_-_nfoHlZVhT_diejpqshzjX_dt13Fra0UKCioYiTtzi7xNXFw2Y&_nc_zt=23&_nc_ht=scontent-cdg4-3.xx&_nc_gid=ZWQuRIaYQg2MEqpKivnKfQ&oh=00_AfXS1IBqyzpSeQ9Y6nI3g5sW2pL1gQZjKCJmLCHxMQeCaQ&oe=68AF7E83"
+    },
+    {
+      "id": "258b5f64-9329-8126-aa83-e17e339bfe76",
+      "title": "Room for rent for a couple in Igualada",
+      "overview": "A room is available for rent for a couple in Igualada, with the possibility of accepting children, but not mareantes",
+      "description": "Alquiló habitación para pareja EN IGUALADA VER UBICACIÓN!!!!!! [PHONE NUMBER CENSORED] TAMBIEN ASEPTO NENES NO MAREANTES",
+      "price": "N/A",
+      "zone": "Igualada",
+      "zoneMacro": "",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "The post lacks essential information such as price and photos, and the contact details seem suspicious, which raises concerns about its reliability.",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T13:39:00.000+00:00",
+      "link": "https://www.facebook.com/groups/365556558673981/posts/1070198108209819/",
+      "status": "active",
+      "imageUrl": ""
+    },
     {
       "id": "258b5f64-9329-811e-bd95-c1a8cbaddf1e",
       "title": "Two rooms for rent for girls",
@@ -782,7 +816,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-22T21:31:00.000+00:00",
       "link": "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1070848718553993/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": ""
     },
     {
