@@ -1,13 +1,5 @@
 {
   "urls": {
-    "https://www.facebook.com/groups/apartamentosbarcelona/posts/4014303005565992/": {
-      "reason": "AI_NOT_RELEVANT",
-      "timestamp": "2025-08-21T18:36:07.370275"
-    },
-    "https://www.facebook.com/groups/apartamentosbarcelona/posts/4014204352242524/": {
-      "reason": "AI_NOT_RELEVANT",
-      "timestamp": "2025-08-21T18:36:07.371522"
-    },
     "https://www.facebook.com/groups/apartamentosbarcelona/posts/4014540748875551/": {
       "reason": "AI_NOT_RELEVANT",
       "timestamp": "2025-08-21T20:26:18.961369"
@@ -1203,8 +1195,44 @@
     "https://www.facebook.com/groups/1674520359717832/posts/2236250346878161/": {
       "reason": "AI_NOT_RELEVANT",
       "timestamp": "2025-08-23T18:53:11.676505"
+    },
+    "https://www.facebook.com/groups/2723040451261813/posts/4299535983612244/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-23T19:20:49.170601"
+    },
+    "https://www.facebook.com/groups/2723040451261813/posts/4299528540279655/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-23T19:20:49.172295"
+    },
+    "https://www.facebook.com/groups/2723040451261813/posts/4299527563613086/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-23T19:20:49.173963"
+    },
+    "https://www.facebook.com/groups/2723040451261813/posts/4299513786947797/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-23T19:22:01.521975"
+    },
+    "https://www.facebook.com/groups/2723040451261813/posts/4299435426955633/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-23T19:22:01.523617"
+    },
+    "https://www.facebook.com/groups/2723040451261813/posts/4299305133635329/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-23T19:22:01.525429"
+    },
+    "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1071677388471126/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-23T19:25:56.385970"
+    },
+    "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1071617885143743/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-23T19:25:56.387752"
+    },
+    "https://www.facebook.com/groups/365556558673981/posts/1070364654859831/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-23T19:26:32.075374"
     }
   },
-  "total_rejected_count": 408,
-  "timestamp": "2025-08-23T18:30:48.753829"
+  "total_rejected_count": 417,
+  "timestamp": "2025-08-23T19:17:13.527631"
 }

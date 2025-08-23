@@ -1,8 +1,25 @@
 {
-  "generatedAt": "2025-08-23T18:57:07.674Z",
-  "count": 229,
-  "totalRejectedCount": 408,
+  "generatedAt": "2025-08-23T19:27:08.892Z",
+  "count": 230,
+  "totalRejectedCount": 417,
   "results": [
+    {
+      "id": "258b5f64-9329-8146-9100-e6bd51d82aa6",
+      "title": "Room for rent in Barcelona city center",
+      "overview": "Available room for single person or couple in Barcelona city center, available from now until August 30th",
+      "description": "Hola! Tengo una habitación disponible para pareja o persona sola, en el centro de Barcelona. Disponible desde ya hasta el 30 de agosto.",
+      "price": "N/A",
+      "zone": "Barcelona city center",
+      "zoneMacro": "",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "Limited information provided, no photos available, and lack of contact details",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T19:26:00.000+00:00",
+      "link": "https://www.facebook.com/groups/365556558673981/posts/1070438168185813/",
+      "status": "active",
+      "imageUrl": ""
+    },
     {
       "id": "258b5f64-9329-816e-9204-ee55193cc412",
       "title": "Room for Rent in Barcelona",
@@ -3094,7 +3111,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-21T05:24:00.000+00:00",
       "link": "https://www.facebook.com/groups/2723040451261813/posts/4296186947280481/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": ""
     },
     {
