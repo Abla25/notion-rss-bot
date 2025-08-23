@@ -1,8 +1,42 @@
 {
-  "generatedAt": "2025-08-23T22:58:03.751Z",
-  "count": 235,
-  "totalRejectedCount": 439,
+  "generatedAt": "2025-08-23T23:32:39.349Z",
+  "count": 237,
+  "totalRejectedCount": 449,
   "results": [
+    {
+      "id": "258b5f64-9329-8112-b620-fb30c3cdfc8e",
+      "title": "Room for Rent with Bunk Bed",
+      "overview": "Room rental for 2 people with stable work in L1 can serra-Hospitalet de llobregat",
+      "description": "Se alquila habitacion con litera Para 2 personas con trabajo estable L1 can serra-Hospitalet de llobregat",
+      "price": "N/A",
+      "zone": "Hospitalet de llobregat",
+      "zoneMacro": "L'Hospitalet de Llobregat",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "The listing lacks photos, and the description is brief, which raises some concerns about its legitimacy and completeness.",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T23:30:00.000+00:00",
+      "link": "https://www.facebook.com/groups/365556558673981/posts/1070531984843098/",
+      "status": "active",
+      "imageUrl": ""
+    },
+    {
+      "id": "258b5f64-9329-812c-8f4c-c8087b0cc47e",
+      "title": "Room for rent with bunk bed",
+      "overview": "Room for 2 people with stable work in L1 Can Serra-Hospitalet de Llobregat",
+      "description": "Se alquila habitacion con litera Para 2 personas con trabajo estable L1 can serra-Hospitalet de llobregat",
+      "price": "N/A",
+      "zone": "L1 Can Serra-Hospitalet de Llobregat",
+      "zoneMacro": "L'Hospitalet de Llobregat",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "The post is a room rental listing but lacks essential details such as price and photos, and there are no visible contacts.",
+      "datePublished": "",
+      "dateAdded": "2025-08-23T23:21:00.000+00:00",
+      "link": "https://www.facebook.com/groups/2723040451261813/posts/4299661390266370/",
+      "status": "expired",
+      "imageUrl": ""
+    },
     {
       "id": "258b5f64-9329-8172-aed4-d2ffa5395428",
       "title": "Room for Rent for Couple",
@@ -782,7 +816,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-23T08:30:00.000+00:00",
       "link": "https://www.facebook.com/groups/365556558673981/posts/1070073698222260/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": ""
     },
     {
