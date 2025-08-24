@@ -1,9 +1,5 @@
 {
   "urls": {
-    "https://www.facebook.com/groups/2723040451261813/posts/4297614697137706/": {
-      "reason": "AI_NOT_RELEVANT",
-      "timestamp": "2025-08-22T06:36:24.572572"
-    },
     "https://www.facebook.com/groups/2723040451261813/posts/4297678073798035/": {
       "reason": "AI_NOT_RELEVANT",
       "timestamp": "2025-08-22T07:22:31.293224"
@@ -1187,8 +1183,40 @@
     "https://www.facebook.com/groups/2723040451261813/posts/4299587060273803/": {
       "reason": "AI_NOT_RELEVANT",
       "timestamp": "2025-08-24T06:33:46.004586"
+    },
+    "https://www.facebook.com/groups/2723040451261813/posts/4300019263563916/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-24T07:21:46.862474"
+    },
+    "https://www.facebook.com/groups/2723040451261813/posts/4299998906899285/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-24T07:21:46.864117"
+    },
+    "https://www.facebook.com/groups/1674520359717832/posts/2236894906813705/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-24T07:23:04.450374"
+    },
+    "https://www.facebook.com/groups/1674520359717832/posts/2236894130147116/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-24T07:23:04.452133"
+    },
+    "https://www.facebook.com/groups/1674520359717832/posts/2236865686816627/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-24T07:23:04.454143"
+    },
+    "https://www.facebook.com/groups/365556558673981/posts/1070725794823717/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-24T07:23:39.256357"
+    },
+    "https://www.facebook.com/groups/986691378511610/posts/2179747519205984/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-24T07:24:19.210212"
+    },
+    "https://www.facebook.com/groups/986691378511610/posts/2179745135872889/": {
+      "reason": "AI_NOT_RELEVANT",
+      "timestamp": "2025-08-24T07:24:19.211870"
     }
   },
-  "total_rejected_count": 465,
-  "timestamp": "2025-08-24T06:33:40.718645"
+  "total_rejected_count": 473,
+  "timestamp": "2025-08-24T07:21:42.742281"
 }
