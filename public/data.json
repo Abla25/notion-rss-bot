@@ -1,8 +1,25 @@
 {
-  "generatedAt": "2025-08-24T09:37:04.935Z",
-  "count": 250,
+  "generatedAt": "2025-08-24T10:46:54.630Z",
+  "count": 251,
   "totalRejectedCount": 485,
   "results": [
+    {
+      "id": "259b5f64-9329-8115-8149-f05f1f0530c4",
+      "title": "Room for Rent for Couple",
+      "overview": "Room rental for a couple or two girls in Bac de Roda",
+      "description": "SE ALQUILA HABITACIÓN PARA PAREJA O DOS CHICAS EN BAC DE RODA , Inf .. interno",
+      "price": "N/A",
+      "zone": "Bac de Roda",
+      "zoneMacro": "",
+      "rooms": "1",
+      "reliability": 2,
+      "reliabilityReason": "The listing lacks essential details such as price and photos, which are crucial for evaluating the rental. Additionally, the absence of clear contact information raises concerns about the listing's legitimacy.",
+      "datePublished": "",
+      "dateAdded": "2025-08-24T10:46:00.000+00:00",
+      "link": "https://www.facebook.com/groups/986691378511610/posts/2179251452588924/",
+      "status": "active",
+      "imageUrl": ""
+    },
     {
       "id": "259b5f64-9329-8103-8113-d8fecce9e7fe",
       "title": "Room for rent in Santa Eulalia",
