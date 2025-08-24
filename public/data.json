@@ -1,8 +1,76 @@
 {
-  "generatedAt": "2025-08-24T08:32:05.602Z",
-  "count": 246,
-  "totalRejectedCount": 481,
+  "generatedAt": "2025-08-24T09:37:04.935Z",
+  "count": 250,
+  "totalRejectedCount": 485,
   "results": [
+    {
+      "id": "259b5f64-9329-8103-8113-d8fecce9e7fe",
+      "title": "Room for rent in Santa Eulalia",
+      "overview": "A room is available for rent in Santa Eulalia.",
+      "description": "Habitacion dispo en santa eulalia .",
+      "price": "N/A",
+      "zone": "Santa Eulalia",
+      "zoneMacro": "L'Hospitalet de Llobregat",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "The listing is brief and lacks details, there are no images provided, and no contact information is available, which raises concerns about the validity of the listing.",
+      "datePublished": "",
+      "dateAdded": "2025-08-24T09:26:00.000+00:00",
+      "link": "https://www.facebook.com/groups/1674520359717832/posts/2236941033475759/",
+      "status": "active",
+      "imageUrl": ""
+    },
+    {
+      "id": "259b5f64-9329-81bf-acdc-e95f23d55487",
+      "title": "Room for rent in Sabadell",
+      "overview": "A room is available for rent in Sabadell, suitable for UAB students",
+      "description": "🏠 Room for Rent in Sabadell – Perfect for UAB Students!",
+      "price": "N/A",
+      "zone": "Sabadell",
+      "zoneMacro": "",
+      "rooms": "N/A",
+      "reliability": 1,
+      "reliabilityReason": "The listing lacks essential details such as price, photos, and contact information, which raises concerns about its legitimacy",
+      "datePublished": "",
+      "dateAdded": "2025-08-24T09:23:00.000+00:00",
+      "link": "https://www.facebook.com/groups/1674520359717832/posts/2236942016808994/",
+      "status": "active",
+      "imageUrl": ""
+    },
+    {
+      "id": "259b5f64-9329-818a-a06b-c5a8b806bbac",
+      "title": "Room for rent for couple",
+      "overview": "Large, bright, and ventilated room for rent for couple without kids or pets in Esplugues/Cornellà - Sant Ildefonso",
+      "description": "📢 Se alquila habitación para pareja sin niños ni mascotas 🛏️ Habitación amplia, luminosa y ventilada (exterior). 📍 Zona Esplugues / Cornellà – Sant Ildefonso. 🚇 Metro y tranvía muy cerca. ✅ Barrio tranquilo con todos los servicios ❌ No fumadores",
+      "price": "N/A",
+      "zone": "Esplugues/Cornellà - Sant Ildefonso",
+      "zoneMacro": "",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "The post lacks photos and detailed information about the room, and there are no contacts available.",
+      "datePublished": "",
+      "dateAdded": "2025-08-24T09:22:00.000+00:00",
+      "link": "https://www.facebook.com/groups/2723040451261813/posts/4300077093558133/",
+      "status": "active",
+      "imageUrl": ""
+    },
+    {
+      "id": "259b5f64-9329-8139-bc93-df95a482e73c",
+      "title": "Room for rent with bunk bed for 2 people",
+      "overview": "Room for rent with bunk bed for 2 people with stable work in L1 can serra-Hospitalet de llobregat",
+      "description": "Se alquila habitacion con litera Para 2 personas con trabajo estable L1 can serra-Hospitalet de llobregat",
+      "price": "N/A",
+      "zone": "Hospitalet de llobregat",
+      "zoneMacro": "L'Hospitalet de Llobregat",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "The post lacks photos and detailed information about the room, and there are no contacts available.",
+      "datePublished": "",
+      "dateAdded": "2025-08-24T09:22:00.000+00:00",
+      "link": "https://www.facebook.com/groups/2723040451261813/posts/4300100496889126/",
+      "status": "active",
+      "imageUrl": ""
+    },
     {
       "id": "259b5f64-9329-8164-bf83-e70554dac53e",
       "title": "Apartment and private room for rent in Barcelona",
@@ -85,7 +153,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-24T04:31:00.000+00:00",
       "link": "https://www.facebook.com/groups/apartamentosbarcelona/posts/4016683798661246/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": ""
     },
     {
@@ -221,7 +289,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-23T21:38:00.000+00:00",
       "link": "https://www.facebook.com/groups/986691378511610/posts/2178914882622581/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": ""
     },
     {
@@ -765,7 +833,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-23T11:19:00.000+00:00",
       "link": "https://www.facebook.com/groups/2723040451261813/posts/4298999580332551/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": ""
     },
     {
