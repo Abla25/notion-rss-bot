@@ -1,8 +1,25 @@
 {
-  "generatedAt": "2025-08-24T03:52:06.098Z",
-  "count": 241,
-  "totalRejectedCount": 459,
+  "generatedAt": "2025-08-24T04:31:51.639Z",
+  "count": 242,
+  "totalRejectedCount": 460,
   "results": [
+    {
+      "id": "259b5f64-9329-8178-b529-d3d8701b7d38",
+      "title": "Room for rent with bunk bed",
+      "overview": "Room available for 2 people with stable work, located near L1 can serra-Hospitalet de llobregat",
+      "description": "Se alquila habitacion con litera Para 2 personas con trabajo estable L1 can serra-Hospitalet de llobregat",
+      "price": "N/A",
+      "zone": "Hospitalet de llobregat",
+      "zoneMacro": "L'Hospitalet de Llobregat",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "The listing lacks photos and does not provide a price or detailed contact information, which raises concerns about its legitimacy and completeness.",
+      "datePublished": "",
+      "dateAdded": "2025-08-24T04:31:00.000+00:00",
+      "link": "https://www.facebook.com/groups/apartamentosbarcelona/posts/4016683798661246/",
+      "status": "active",
+      "imageUrl": ""
+    },
     {
       "id": "259b5f64-9329-8193-b4cc-dcae02e318d0",
       "title": "Room for rent with bunk bed",
@@ -17,7 +34,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-24T03:50:00.000+00:00",
       "link": "https://www.facebook.com/groups/habitacionesenbarcelona/posts/1071829641789234/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": ""
     },
     {
