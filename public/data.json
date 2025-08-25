@@ -1,8 +1,25 @@
 {
-  "generatedAt": "2025-08-25T18:43:15.639Z",
-  "count": 422,
+  "generatedAt": "2025-08-25T19:20:29.963Z",
+  "count": 423,
   "totalRejectedCount": 672,
   "results": [
+    {
+      "id": "25ab5f64-9329-819a-973f-e7d9e5b9a23d",
+      "title": "Room for rent for a male in a quiet flat",
+      "overview": "A clean and quiet room for rent near Plaza España",
+      "description": "Alquilo habitación para hombre piso trankilo limpio serca plaza España tel [PHONE NUMBER CENSORED]",
+      "price": "N/A",
+      "zone": "Plaza España",
+      "zoneMacro": "Sants-Montjuïc",
+      "rooms": "N/A",
+      "reliability": 2,
+      "reliabilityReason": "The listing lacks photos and does not provide a clear description of the accommodation, but it includes a contact phone number and seems to be a genuine rental offer.",
+      "datePublished": "",
+      "dateAdded": "2025-08-25T19:19:00.000+00:00",
+      "link": "https://www.facebook.com/groups/986691378511610/posts/2180991459081590/",
+      "status": "active",
+      "imageUrl": ""
+    },
     {
       "id": "25ab5f64-9329-817a-a9dc-c0d112ddf0b3",
       "title": "Furnished double room for rent",
