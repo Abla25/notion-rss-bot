@@ -1,8 +1,25 @@
 {
-  "generatedAt": "2025-08-25T02:03:28.899Z",
-  "count": 358,
-  "totalRejectedCount": 569,
+  "generatedAt": "2025-08-25T03:21:40.749Z",
+  "count": 359,
+  "totalRejectedCount": 570,
   "results": [
+    {
+      "id": "25ab5f64-9329-811e-ad48-f1da20f38632",
+      "title": "Room for Rent",
+      "overview": "Room for rent with a window and access to a small patio",
+      "description": "¡Alquilo Habitación!",
+      "price": "N/A",
+      "zone": "Esplugues de Llobregat",
+      "zoneMacro": "",
+      "rooms": "",
+      "reliability": 2,
+      "reliabilityReason": "The listing has limited information and no photos, but it seems to be a genuine room rental listing",
+      "datePublished": "",
+      "dateAdded": "2025-08-25T03:20:00.000+00:00",
+      "link": "https://www.facebook.com/groups/2723040451261813/posts/4300743430158166/",
+      "status": "active",
+      "imageUrl": "https://scontent.fixc4-1.fna.fbcdn.net/v/t39.30808-6/538025494_1293290452405417_3932009881601591439_n.jpg?stp=dst-jpg_s1080x2048_tt6&_nc_cat=107&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=dlufZ4c5yXoQ7kNvwE66sPN&_nc_oc=AdniQB7NdzBq2LT_9m3_wXx3CIji-zIarrDFqX6roDoMx398VbsjRkSurNqOsUq2_KU&_nc_zt=23&_nc_ht=scontent.fixc4-1.fna&_nc_gid=OACt2DUAPJtVeoS6MLBZ1g&oh=00_AfXH56_i9UwWhIc7whSe__0ZnSn5s_wE81AZZKVa0KZb4A&oe=68B14228"
+    },
     {
       "id": "25ab5f64-9329-815f-b548-cce948520dfd",
       "title": "Room for rent",
@@ -85,7 +102,7 @@
       "datePublished": "",
       "dateAdded": "2025-08-25T00:17:00.000+00:00",
       "link": "https://www.facebook.com/groups/986691378511610/posts/2180150725832330/",
-      "status": "active",
+      "status": "expired",
       "imageUrl": "https://scontent.fdel7-1.fna.fbcdn.net/v/t39.30808-6/537793295_10237400290483973_1087762133668129826_n.jpg?stp=dst-jpg_s720x720_tt6&_nc_cat=111&ccb=1-7&_nc_sid=aa7b47&_nc_ohc=5-Y-qca4O6gQ7kNvwHpBhgC&_nc_oc=AdnlAQSDH0AZ5lTvFV5akEmroRlpDL9WTVFoc9VLIhh27vuKRzqjXa-bbiCRDoSGxUo&_nc_zt=23&_nc_ht=scontent.fdel7-1.fna&_nc_gid=tE7w0uWUoEmFp1t03wMysw&oh=00_AfVHJXU6t-UUwGS_42uJlxXwkdOebRQGaEJQA_j1kgnsDA&oe=68B175E2"
     },
     {
